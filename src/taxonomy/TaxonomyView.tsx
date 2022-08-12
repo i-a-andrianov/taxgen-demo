@@ -46,7 +46,8 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
             label: w.word,
             shape: "circularImage", 
             image: `/api/images/${w.word}`,
-            color: (w.id === currentWord) ? '#8cffdd' : (w.generated ? '#9effff' : '#ccd1ff'),
+            color: {background: (w.id === currentWord) ? '#8cffdd' : (w.generated ? '#9effff' : '#ccd1ff')
+                  },
             level: w.level
           };
         })
@@ -69,7 +70,7 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
 
       const options = {
         nodes: {
-          borderWidth: 0
+          borderWidth: 5
         },
         edges: {
             arrows: 'to',
@@ -92,6 +93,7 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
         },
         interaction: {
           dragNodes: false,
+          hover: true,
           navigationButtons: true,
           keyboard: true
         },
@@ -147,11 +149,10 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
     }, [currentWord, words, relations, navigateToWord, generateWords, generateRelations]);
   
     const [search, setSearch] = useState('');
-
     return (<>
       <h2>
         <br/>
-      WordNet3.0 vizualization for candidate-free taxonomy enrichment
+      TaxFree: WordNet3.0 visualization for candidate-free taxonomy enrichment
       <br/><br/>
       </h2>
       <Row>
@@ -163,8 +164,11 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
         </Col>
         <Col xs={3}>
           <InputGroup className="mb-3">
-            <Form.Control type="text" placeholder="word" value={search} onChange={(e) => setSearch(e.target.value)} />
-            <Button style={{"backgroundColor": "#008CBA", "borderColor": "#008CBA", "paddingLeft": "10px !important"} as React.CSSProperties} onClick={() => {navigateToSearch(search)}}>Move to</Button>
+            <Form.Control type="text" placeholder="word" value={search} onChange={(e) => setSearch(e.target.value)} onKeyPress={event => {
+              if (event.key === "Enter") {navigateToSearch(search); setSearch("");
+              }
+            }} />
+            <Button style={{"backgroundColor": "#008CBA", "borderColor": "#008CBA", "paddingLeft": "10px !important"} as React.CSSProperties} onClick={() => {navigateToSearch(search); setSearch("")}}>Move to</Button>
           </InputGroup>
         </Col>
         <Col xs={2}>
@@ -184,7 +188,7 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
               <Card.Body>
                 <Card.Title>{currentWord}</Card.Title>
                 <Card.Text>
-                  {lemmas.join(', ')}
+                  {lemmas.join()}
                 </Card.Text>
                 <Card.Text>
                   {definition}
