@@ -1,5 +1,6 @@
 import { BehaviorSubject } from "rxjs";
-import { Taxonomy } from "./TaxonomyDTO";
+import { Taxonomy, Word } from "./TaxonomyDTO";
+
 
 export default function TaxonomyModel() {
     let token: string | null = null;
@@ -10,6 +11,7 @@ export default function TaxonomyModel() {
         relations: []
     };
     const taxonomy$ = new BehaviorSubject(data);
+    const misc$ = new BehaviorSubject<Word[]>([]);
 
     setTimeout(async () => {
         await init();
@@ -29,6 +31,7 @@ export default function TaxonomyModel() {
             if (token === null) return;
             const graph = await fetchCurrentGraphForToken(token);
             taxonomy$.next(graph);
+            misc$.next([]);
         });
     }
 
@@ -45,12 +48,14 @@ export default function TaxonomyModel() {
     function navigateToRoot() {
         setTimeout(async() => {
             taxonomy$.next(await fetchGraphCenteredToWord(null));
+            misc$.next([]);
         });
     }
 
     function navigateToWord(id: string) {
         setTimeout(async () => {
             taxonomy$.next(await fetchGraphCenteredToWord(id));
+            misc$.next([]);
         });
     }
 
@@ -58,9 +63,14 @@ export default function TaxonomyModel() {
         setTimeout(async () => {
             if (search.length) {
                 const id = await fetchSearch(search);
-                if (id.length) {
+                if (typeof id === 'string') {
                     taxonomy$.next(await fetchGraphCenteredToWord(id));
-                } else {
+                    misc$.next([]);
+                } else if (Array.isArray(id)) {
+                    taxonomy$.next(await fetchGraphCenteredToWord(id[0].word));
+                    misc$.next(id);
+                }
+                else {
                     return false;
                 }
                 
@@ -93,6 +103,7 @@ export default function TaxonomyModel() {
     function generateWords(id: string) {
         setTimeout(async () => {
             taxonomy$.next(await fetchGeneratedGraphWords(id));
+            misc$.next([]);
         });
     }
 
@@ -114,6 +125,7 @@ export default function TaxonomyModel() {
     function generateRelations(fromId: string, toId: string) {
         setTimeout(async () => {
             taxonomy$.next(await fetchGeneratedGraphRelations(fromId, toId));
+            misc$.next([]);
         });
     }
 
@@ -141,11 +153,13 @@ export default function TaxonomyModel() {
             token = tok;
             const graph = await fetchGraphCenteredToWord(currentWord);
             taxonomy$.next(graph);
+            misc$.next([]);
         });
     }
 
     return {
         taxonomy$,
+        misc$,
         navigateToRoot,
         navigateToWord,
         navigateToSearch,

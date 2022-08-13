@@ -13,7 +13,7 @@ def get_graph_with_node(start_node):
     second_hypernyms = [(j.name(), 1) for i, _ in hypernyms for j in wn.synset(i).hypernyms()]
     co_hyponyms = [(j.name(), 5) for i, _ in hypernyms for j in wn.synset(i).hyponyms()]
 
-    all_nodes = hyponyms + second_hyponyms + co_hypernyms + hypernyms + second_hypernyms + co_hyponyms
+    all_nodes = hyponyms + second_hyponyms + co_hypernyms + hypernyms + second_hypernyms + co_hyponyms + [(wn.synset(start_node).name(), 5)]
 
     nodes, relations = _get_relations(all_nodes)
 
@@ -100,7 +100,11 @@ def check_node_name(name):
             return wn.synset(name).name()
         except WordNetError as e:
             print(f"Synset not found: {name}")
+    name = name.replace(" ", "_")
     possible_synsets = wn.synsets(name, pos='n')
     if len(possible_synsets) == 1 and possible_synsets[0].pos() == 'n':
         return possible_synsets[0].name()
-    return ""
+    elif len(possible_synsets) > 1:
+        return [{"word": s.name(), "definition": s.definition()} for s in possible_synsets if s.pos() == 'n']
+    else:
+        return ""

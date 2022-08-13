@@ -6,11 +6,13 @@ import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
+import Table from 'react-bootstrap/Table';
 import InputGroup from 'react-bootstrap/InputGroup';
-import { Taxonomy } from "./TaxonomyDTO";
+import { Taxonomy, Word } from "./TaxonomyDTO";
 
 export interface TaxonomyViewProps {
   taxonomy: Taxonomy;
+  misc: Word[];
   navigateToRoot: () => void;
   navigateToWord: (id: string) => void;
   navigateToSearch: (search: string) => void;
@@ -22,6 +24,7 @@ export interface TaxonomyViewProps {
 export default function TaxonomyView(props: TaxonomyViewProps) {
     const {
       taxonomy,
+      misc,
       navigateToRoot, 
       navigateToWord, 
       navigateToSearch,
@@ -30,7 +33,6 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
       regenerateGraph
     } = props;
     const {currentWord, words, relations} = taxonomy;
-
     const definition = words.filter((w) => w.id === currentWord).map((w) => w.definition)[0];
     const lemmas = words.filter((w) => w.id === currentWord).map((w) => w.lemmas)[0];
 
@@ -198,6 +200,18 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
             :
             <></>
           }
+          {misc.length ?
+          <><span><br/>Maybe you meant:</span>
+          <Table striped bordered hover size="sm">
+            <tbody>
+              {misc.slice(1).map(s => 
+                  <tr>
+                  <td><a href="#" onClick={() => navigateToWord(s.word)}>{s.word}</a></td>
+                  <td>{s.definition}</td>
+                </tr>
+                )} 
+            </tbody>
+          </Table></> : <></>}
         </Col>
       </Row>
     </>);
