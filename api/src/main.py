@@ -9,11 +9,15 @@ app = Flask(__name__)
 
 opened_sessions = {}
 root = "entity.n.01"
+candidates = {}
+cur_index = 0
 
 
 @app.post('/token')
 def get_new_session():
     uid = str(uuid.uuid4())
+    global cur_index
+    cur_index = 0
     return jsonify(uid)
 
 
@@ -56,6 +60,8 @@ def center_graph_to():
         abort(400)
         return
     if not start_node:
+        global cur_index
+        cur_index = 0
         start_node = root
 
     graph = get_graph_with_node(start_node)
@@ -72,8 +78,12 @@ def generate_words():
         abort(400)
         return
 
+    global cur_index
     graph = opened_sessions[uid]
-    graph = generate_new_node(graph, start_node)
+    if start_node not in candidates:
+        cur_index = 0
+    graph = generate_new_node(graph, start_node, candidates, cur_index)
+    cur_index += 1
     opened_sessions[uid] = graph
     return jsonify(graph)
 
@@ -88,8 +98,12 @@ def generate_relations():
         abort(400)
         return
 
+    global cur_index
     graph = opened_sessions[uid]
-    graph = generate_new_node(graph, start_node, end_node)
+    if start_node not in candidates:
+        cur_index = 0
+    graph = generate_new_node(graph, start_node, candidates, cur_index, end_node)
+    cur_index += 1
     opened_sessions[uid] = graph
     return jsonify(graph)
 

@@ -12,6 +12,9 @@ COPY src/load_images.py ./src/load_images.py
 RUN python src/load_images.py
 RUN unzip ./src/wn_images.zip -d ./src/
 
+COPY src/load_bert.py ./src/load_bert.py
+RUN python src/load_bert.py
+
 COPY src ./src
 ENV PYTHONPATH=src
 CMD ["python", "src/main.py"]
