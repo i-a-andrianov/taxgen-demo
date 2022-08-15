@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3.3"
 services:
   frontend:
     build: .
@@ -7,4 +7,4 @@ services:
   api:
     build: api
     ports:
-      - "8888:8888"
+      - "8471:8888"

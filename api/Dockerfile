@@ -8,6 +8,10 @@ RUN pip install -r requirements.txt
 COPY src/prepare_nltk.py ./src/prepare_nltk.py
 RUN python src/prepare_nltk.py
 
+COPY src/load_images.py ./src/load_images.py
+RUN python src/load_images.py
+RUN unzip ./src/wn_images.zip -d ./src/
+
 COPY src ./src
 ENV PYTHONPATH=src
 CMD ["python", "src/main.py"]

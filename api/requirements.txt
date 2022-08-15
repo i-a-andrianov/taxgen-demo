@@ -1,3 +1,5 @@
 wget==3.2
 Flask==2.0.2
 nltk==3.6.7
+gdown
+requests
