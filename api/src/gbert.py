@@ -132,6 +132,6 @@ def generate_candidates(word):
 
     inputs = tokenizer(text, return_tensors='pt').to(DEVICE)
     mix = get_pred(inputs, subst_type='mix', pred_child_emb=pred_child_emb, num=30)
-    candidates = filter_results([i for i in mix if all(not j.isdigit() and not j in string.punctuation for j in i[0])])
+    candidates = filter_results([i for i in mix if all(not j.isdigit() and not j in string.punctuation for j in i[0] and i[0] not in wn.all_lemma_names())])
 
     return [i[0] for i in candidates[:5]]
