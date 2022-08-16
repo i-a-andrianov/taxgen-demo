@@ -89,7 +89,7 @@ def filter_results(res):
     return res_filter
 
 
-def get_pred(inputs, subst_type='no', pred_child_emb=None, num=30):
+def get_pred(inputs, subst_type='no', pred_child_emb=None, num=50):
     outputs = maskedlm.bert(input_ids=inputs.input_ids, attention_mask=inputs.attention_mask)
     hidden_states = outputs.last_hidden_state
     masked_position = [1]
@@ -131,7 +131,7 @@ def generate_candidates(word):
     text = f'[MASK] is {art} {par}'
 
     inputs = tokenizer(text, return_tensors='pt').to(DEVICE)
-    mix = get_pred(inputs, subst_type='mix', pred_child_emb=pred_child_emb, num=30)
-    candidates = filter_results([i for i in mix if all(not j.isdigit() and not j in string.punctuation for j in i[0] and i[0] not in wn.all_lemma_names())])
+    mix = get_pred(inputs, subst_type='mix', pred_child_emb=pred_child_emb, num=100)
+    candidates = filter_results([i for i in mix if i[0] not in set(wn.all_lemma_names()) and all(not j.isdigit() and not j in string.punctuation for j in i[0])])
 
     return [i[0] for i in candidates[:5]]
