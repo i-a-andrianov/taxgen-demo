@@ -9,3 +9,4 @@ transformers==4.21.1
 wget==3.2
 gdown
 requests
+googledrivedownloader
