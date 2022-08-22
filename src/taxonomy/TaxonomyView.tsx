@@ -76,7 +76,7 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
       const options = {
         nodes: {
           borderWidth: 3,
-          borderWidthSelected: 3
+          borderWidthSelected: 5
         },
         edges: {
             arrows: 'to',
