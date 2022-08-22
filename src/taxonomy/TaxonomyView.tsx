@@ -48,7 +48,10 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
             label: w.word,
             shape: "circularImage", 
             image: `/api/images/${w.word}`,
-            color: {background: (w.id === currentWord) ? '#8cffdd' : (w.generated ? '#9effff' : '#ccd1ff')
+            color: {background: (w.id === currentWord) ? '#8cffdd' : (w.generated ? '#9effff' : '#ccd1ff'), 
+                    border: (w.id === currentWord) ? '#8cffdd' : '#ccd1ff',
+                    hover: {border: "#f50041", background: (w.id === currentWord) ? '#8cffdd' : (w.generated ? '#9effff' : '#ccd1ff')},
+                    highlight: {background: (w.id === currentWord) ? '#8cffdd' : (w.generated ? '#9effff' : '#ccd1ff')}
                   },
             level: w.level
           };
@@ -72,7 +75,8 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
 
       const options = {
         nodes: {
-          borderWidth: 5
+          borderWidth: 3,
+          borderWidthSelected: 3
         },
         edges: {
             arrows: 'to',
