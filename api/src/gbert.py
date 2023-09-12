@@ -25,6 +25,7 @@ maskedlm.eval()
 maskedlm.to(DEVICE)
 
 train_idx_features_labels = np.genfromtxt("src/node_graph_reconstruct_model_directed.txt", dtype=np.dtype(str))
+print(train_idx_features_labels.shape)
 gbert_embs = {}
 for i in range(train_idx_features_labels.shape[0]):
     gbert_embs[train_idx_features_labels[i, 0]] = np.array(train_idx_features_labels[i,1:], np.dtype(float))
@@ -52,7 +53,7 @@ class ProjectionLayer(nn.Module):
         return self.layers(x)
 
 
-model = ProjectionLayer(emb_size=32, hidden_sizes=HIDDEN_STATES, target_size=768, device=DEVICE).to(DEVICE)
+model = ProjectionLayer(emb_size=300, hidden_sizes=HIDDEN_STATES, target_size=768, device=DEVICE).to(DEVICE)
 model.load_state_dict(torch.load("src/projection_model_gb-b.pt", map_location=torch.device('cpu')))
 model.eval()
 
@@ -103,7 +104,7 @@ def get_pred(inputs, subst_type='no', pred_child_emb=None, num=50):
     prediction_scores = maskedlm.cls(hidden_states)
     prediction_scores = prediction_scores.detach().squeeze(0)[1]
     probs = torch.softmax(prediction_scores, dim=-1)
-    topk_prob, topk_indices = torch.topk(probs, 100)
+    topk_prob, topk_indices = torch.topk(probs, 300)
     topk_prob = [t.item() for t in topk_prob]
     topk_tokens = tokenizer.convert_ids_to_tokens(topk_indices.cpu().numpy())
     candidates = list(zip(topk_tokens, topk_prob))
@@ -134,4 +135,4 @@ def generate_candidates(word):
     mix = get_pred(inputs, subst_type='mix', pred_child_emb=pred_child_emb, num=100)
     candidates = filter_results([i for i in mix if i[0] not in set(wn.all_lemma_names()) and all(not j.isdigit() and not j in string.punctuation for j in i[0])])
 
-    return [i[0] for i in candidates[:5]]
+    return [i[0] for i in candidates]
