@@ -2,7 +2,7 @@ import uuid
 from collections import defaultdict
 from nltk.corpus import wordnet as wn
 from nltk.corpus.reader.wordnet import WordNetError
-from gbert import predict_node_from_bert
+from taxollama import predict_node_from_taxollama
 
 
 def get_graph_with_node(start_node):
@@ -71,7 +71,7 @@ def _get_relations(all_nodes):
 
 def generate_new_node(graph, start_node, candidates, cur_index, end_node=None):
     level, start_name = get_level_and_start_name(graph, start_node)
-    node_x = predict_node_from_bert(start_name, candidates, cur_index)
+    node_x = predict_node_from_taxollama(start_name, candidates, cur_index, end_node)
     new_word = {
             'id': str(uuid.uuid4()),
             'word': node_x,

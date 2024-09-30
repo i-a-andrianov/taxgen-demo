@@ -1,11 +1,17 @@
 #!flask/bin/python
 from flask import Flask, jsonify, request, abort, send_file
 import uuid
+import os
 from nltk.corpus import wordnet as wn
-from helpers import get_graph_with_node, generate_new_node, check_node_name
+from diffusers import StableDiffusionPipeline
+import torch
+from helpers import get_graph_with_node, check_node_name, generate_new_node
 
 all_lemmas = list(wn.all_lemma_names('n'))
 app = Flask(__name__)
+model_id = "prompthero/openjourney"
+pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float16)
+#pipe = pipe.to("cuda")
 
 opened_sessions = {}
 root = "entity.n.01"
@@ -37,12 +43,26 @@ def get_current_graph():
 
 @app.get('/images/<node_id>')
 def get_image(node_id):
-    offset = str(wn.synset(node_id).offset())
-    if len(offset) < 8:
-        offset = "0"*(8-len(offset)) + offset
-    filename = f'images/n{offset}.JPEG'
-    return send_file(filename, mimetype='image/jpeg')
-    
+    if '.n.' in node_id:
+        synset = wn.synset(node_id)
+        offset = str(wn.synset(node_id).offset())
+        if len(offset) < 8:
+            offset = "0"*(8-len(offset)) + offset
+        filename = f'images/n{offset}.JPEG'
+        if os.path.exists(filename):
+            return send_file(filename, mimetype='image/jpeg')
+        else:
+            prompt = f"an image of {synset.name()} ({synset.definition()})"
+            image = pipe(prompt).images[0]
+            image.save(f"images/n{node_id}.png")
+            return send_file(f"images/n{node_id}.png", mimetype='image/jpeg')
+    else:
+        if not os.path.exists(f"images/{node_id}.png"):
+            prompt = f"an image of {node_id}"
+            image = pipe(prompt).images[0]
+            image.save(f"images/{node_id}.png")
+        return send_file(f"images/{node_id}.png", mimetype='image/jpeg')
+ 
     
 @app.get('/search_node')
 def search_node():
