@@ -6,8 +6,6 @@ from collections import defaultdict
 from peft import PeftConfig, PeftModel
 os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 print(torch.cuda.is_available())
-print(torch.version.cuda)
-
 
 
 def predict_node_from_taxollama(word, a, cur_index, last_word=None):
@@ -18,10 +16,14 @@ def predict_node_from_taxollama(word, a, cur_index, last_word=None):
 
 
 def generate_candidates(word, last_word):
-    torch.set_default_device('cuda')
+    if torch.cuda.is_available():
+        torch.set_default_device('cuda')
     config = PeftConfig.from_pretrained('VityaVitalich/TaxoLLaMA_All')
     # Do not forget your token for Llama2 models
-    model = LlamaForCausalLM.from_pretrained(config.base_model_name_or_path, torch_dtype=torch.bfloat16, load_in_4bit=True)
+    if torch.cuda.is_available():
+        model = LlamaForCausalLM.from_pretrained(config.base_model_name_or_path, torch_dtype=torch.bfloat16, load_in_4bit=True)
+    else:
+        model = LlamaForCausalLM.from_pretrained(config.base_model_name_or_path) # torch_dtype=torch.bfloat16) #load_in_4bit=True)
     tokenizer = LlamaTokenizer.from_pretrained(config.base_model_name_or_path)
     inference_model = PeftModel.from_pretrained(model, 'VityaVitalich/TaxoLLaMA_All')
 
@@ -44,8 +46,10 @@ def generate_candidates(word, last_word):
                 "max_new_tokens": 32,
                 "top_k": 20,
             }
-
-    out = inference_model.generate(inputs=input_ids['input_ids'].to('cuda'), **gen_conf)
+    if torch.cuda.is_available():
+        out = inference_model.generate(inputs=input_ids['input_ids'].to('cuda'), **gen_conf)
+    else:
+        out = inference_model.generate(inputs=input_ids['input_ids'], **gen_conf)
 
     text = tokenizer.batch_decode(out)[0][len(system_prompt):].split('[/INST]')[-1]
     return text.split(',')[0]
