@@ -6,6 +6,9 @@ from nltk.corpus import wordnet as wn
 from diffusers import StableDiffusionPipeline
 import torch
 from helpers import get_graph_with_node, check_node_name, generate_new_node
+import os 
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
 
 all_lemmas = list(wn.all_lemma_names('n'))
 app = Flask(__name__)
@@ -49,21 +52,21 @@ def get_image(node_id):
         if len(offset) < 8:
             offset = "0"*(8-len(offset)) + offset
         filename = f'images/n{offset}.JPEG'
-        if os.path.exists(filename):
-            return send_file(filename, mimetype='image/jpeg')
+        if os.path.exists(os.path.join(dir_path,filename)):
+            return send_file(os.path.join(dir_path,filename), mimetype='image/jpeg')
         else:
             prompt = f"an image of {synset.name()} ({synset.definition()})"
             image = pipe(prompt).images[0]
-            image.save(f"images/n{node_id}.png")
-            return send_file(f"images/n{node_id}.png", mimetype='image/jpeg')
+            image.save(os.path.join(dir_path,f"images/n{node_id}.jpeg"))
+            return send_file(os.path.join(dir_path,f"images/n{node_id}.jpeg"), mimetype='image/jpeg')
     else:
-        if not os.path.exists(f"images/{node_id}.png"):
+        if not os.path.exists(f"images/{node_id}.jpeg"):
             prompt = f"an image of {node_id}"
             image = pipe(prompt).images[0]
-            image.save(f"images/{node_id}.png")
-        return send_file(f"images/{node_id}.png", mimetype='image/jpeg')
- 
-    
+            image.save(os.path.join(dir_path,f"images/{node_id}.jpeg"))
+        return send_file(os.path.join(dir_path,f"images/{node_id}.jpeg"), mimetype='image/jpeg')
+
+
 @app.get('/search_node')
 def search_node():
     node_name = request.args['node_name']
