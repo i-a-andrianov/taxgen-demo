@@ -3,8 +3,8 @@ services:
   frontend:
     build: .
     ports:
-      - "8470:80"
+      - "80:80"
   api:
     build: api
     ports:
-      - "8471:8888"
+      - "443:443"
