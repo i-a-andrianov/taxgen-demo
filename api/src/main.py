@@ -14,7 +14,7 @@ all_lemmas = list(wn.all_lemma_names('n'))
 app = Flask(__name__)
 model_id = "prompthero/openjourney"
 pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float16)
-#pipe = pipe.to("cuda")
+pipe = pipe.to("cuda:0")
 
 opened_sessions = {}
 root = "entity.n.01"
@@ -52,21 +52,25 @@ def get_image(node_id):
         if len(offset) < 8:
             offset = "0"*(8-len(offset)) + offset
         filename = f'images/n{offset}.JPEG'
+        gen_filename = f'images/n{offset}_generated.JPEG'
         if os.path.exists(os.path.join(dir_path,filename)):
             return send_file(os.path.join(dir_path,filename), mimetype='image/jpeg')
+        elif os.path.exists(os.path.join(dir_path,gen_filename)):
+            return send_file(os.path.join(dir_path,gen_filename), mimetype='image/jpeg')
         else:
             prompt = f"an image of {synset.name()} ({synset.definition()})"
             image = pipe(prompt).images[0]
-            image.save(os.path.join(dir_path,f"images/n{node_id}.jpeg"))
-            return send_file(os.path.join(dir_path,f"images/n{node_id}.jpeg"), mimetype='image/jpeg')
+            image.save(os.path.join(dir_path,f"images/n{node_id}_generated.jpeg"))
+            return send_file(os.path.join(dir_path,f"images/n{node_id}_generated.jpeg"), mimetype='image/jpeg')
     else:
         if not os.path.exists(f"images/{node_id}.jpeg"):
-            prompt = f"an image of {node_id}"
-            image = pipe(prompt).images[0]
-            image.save(os.path.join(dir_path,f"images/{node_id}.jpeg"))
-        return send_file(os.path.join(dir_path,f"images/{node_id}.jpeg"), mimetype='image/jpeg')
-
-
+            if not os.path.exists(f"images/{node_id}_generated.jpeg"):
+                prompt = f"an image of {node_id}"
+                image = pipe(prompt).images[0]
+                image.save(os.path.join(dir_path,f"images/n{node_id}_generated.jpeg"))
+        return send_file(os.path.join(dir_path,f"images/n{node_id}_generated.jpeg"), mimetype='image/jpeg')
+ 
+    
 @app.get('/search_node')
 def search_node():
     node_name = request.args['node_name']
