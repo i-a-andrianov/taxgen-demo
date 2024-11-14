@@ -8,5 +8,3 @@ services:
     build: api
     ports:
       - "443:443"
-    environment:
-      - NVIDIA_VISIBLE_DEVICES=all

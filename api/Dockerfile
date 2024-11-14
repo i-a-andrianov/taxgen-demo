@@ -1,4 +1,4 @@
-FROM pytorch/pytorch:2.5.1-cuda12.4-cudnn9-devel
+FROM python:3.9.9
 
 WORKDIR /app
 
@@ -10,7 +10,6 @@ RUN python src/prepare_nltk.py
 
 COPY src/load_images.py ./src/load_images.py
 RUN python src/load_images.py
-RUN apt-get update && apt-get install -y unzip && rm -rf /var/lib/apt/lists/*
 RUN unzip ./src/wn_images.zip -d ./src/
 
 COPY src ./src
