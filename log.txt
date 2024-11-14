@@ -1,0 +1,56 @@
+Step 1/17 : FROM node:16.13.0-alpine AS build
+ ---> 44e24535dfbf
+Step 2/17 : WORKDIR /build
+ ---> Using cache
+ ---> 38a19d3a22b4
+Step 3/17 : COPY package.json package.json
+ ---> Using cache
+ ---> 21d62d0f7183
+Step 4/17 : COPY package-lock.json package-lock.json
+ ---> Using cache
+ ---> 0c6f1145f62a
+Step 5/17 : RUN npm cache clean --force
+ ---> Using cache
+ ---> 0dfdb18378c4
+Step 6/17 : RUN npm config set fetch-retry-mintimeout 20000
+ ---> Using cache
+ ---> 600231940a3b
+Step 7/17 : RUN npm config set fetch-retry-maxtimeout 120000
+ ---> Using cache
+ ---> d64c98d3660d
+Step 8/17 : RUN npm ci
+ ---> Using cache
+ ---> a41cbcf52985
+Step 9/17 : COPY tsconfig.json tsconfig.json
+ ---> Using cache
+ ---> b74692735bb7
+Step 10/17 : COPY public public
+ ---> Using cache
+ ---> ffc008609c76
+Step 11/17 : COPY src src
+ ---> Using cache
+ ---> e640b60c70b6
+Step 12/17 : RUN npm run build
+ ---> Running in 7fd82cdabc22
+
+> taxgen-demo@0.1.0 build
+> react-scripts build
+
+Creating an optimized production build...
+[91m[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+[0mFailed to compile.
+
+Module not found: Error: Can't resolve 'vis-data' in '/build/src/taxonomy'
+
+
