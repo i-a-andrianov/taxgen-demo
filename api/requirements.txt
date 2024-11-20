@@ -9,4 +9,7 @@ wget==3.2
 requests==2.31.0
 diffusers==0.30.3
 peft==0.13.0
+bitsandbytes
+sentencepiece
+protobuf
 gdown==5.2.0

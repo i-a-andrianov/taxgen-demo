@@ -21,10 +21,10 @@ def generate_candidates(word, last_word):
     config = PeftConfig.from_pretrained('VityaVitalich/TaxoLLaMA_All')
     # Do not forget your token for Llama2 models
     if torch.cuda.is_available():
-        model = LlamaForCausalLM.from_pretrained(config.base_model_name_or_path, torch_dtype=torch.bfloat16, load_in_4bit=True)
+        model = LlamaForCausalLM.from_pretrained(config.base_model_name_or_path, torch_dtype=torch.bfloat16, load_in_4bit=True, token="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")
     else:
-        model = LlamaForCausalLM.from_pretrained(config.base_model_name_or_path) # torch_dtype=torch.bfloat16) #load_in_4bit=True)
-    tokenizer = LlamaTokenizer.from_pretrained(config.base_model_name_or_path)
+        model = LlamaForCausalLM.from_pretrained(config.base_model_name_or_path, token="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") # torch_dtype=torch.bfloat16) #load_in_4bit=True)
+    tokenizer = LlamaTokenizer.from_pretrained(config.base_model_name_or_path, token="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")
     inference_model = PeftModel.from_pretrained(model, 'VityaVitalich/TaxoLLaMA_All')
 
     processed_term = f"hypernym: {word}"
