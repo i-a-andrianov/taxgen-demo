@@ -10,7 +10,7 @@ print(torch.cuda.is_available())
 
 def predict_node_from_taxollama(word, a, cur_index, last_word=None):
     restop = a.get(word, generate_candidates(word, last_word))
-    a[word][cur_index] = restop
+    a[word] = restop
     res = a[word][cur_index]
     return res
 
@@ -52,8 +52,8 @@ def generate_candidates(word, last_word):
         out = inference_model.generate(inputs=input_ids['input_ids'], **gen_conf)
 
     text = tokenizer.batch_decode(out)[0][len(system_prompt):].split('[/INST]')[-1]
-    return text.split(',')[0]
+    return text.split(',')
 
 
 if __name__ == '__main__':
-    print(predict_node_from_taxollama('bichon', defaultdict(dict), 'addd', ''))
+    print(predict_node_from_taxollama('bichon', {}, 0, ''))
