@@ -8,7 +8,7 @@ RUN npm cache clean --force
 RUN npm config set fetch-retry-mintimeout 20000
 RUN npm config set fetch-retry-maxtimeout 120000
 RUN npm ci
-
+RUN npm install vis-data
 
 COPY tsconfig.json tsconfig.json
 COPY public public

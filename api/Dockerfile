@@ -10,6 +10,10 @@ RUN python src/prepare_nltk.py
 
 COPY src/load_images.py ./src/load_images.py
 RUN python src/load_images.py
+
+COPY src/load_bert.py ./src/load_bert.py
+RUN python src/load_bert.py
+
 RUN apt-get update && apt-get install -y unzip && rm -rf /var/lib/apt/lists/*
 RUN unzip ./src/wn_images.zip -d ./src/
 

@@ -14,7 +14,8 @@ all_lemmas = list(wn.all_lemma_names('n'))
 app = Flask(__name__)
 model_id = "prompthero/openjourney"
 pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float16)
-pipe = pipe.to("cuda:0")
+if torch.cuda.is_available():
+    pipe = pipe.to("cuda:0")
 
 opened_sessions = {}
 root = "entity.n.01"

@@ -3,10 +3,10 @@ services:
   frontend:
     build: .
     ports:
-      - "80:80"
+      - "8470:80"
   api:
     build: api
     ports:
-      - "443:443"
+      - "8471:8888"
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
