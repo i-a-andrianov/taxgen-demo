@@ -1,0 +1,1 @@
+SYSTEM_PROMPT = """<s>[INST] <<SYS>> You are a helpfull assistant. List all the possible words divided with a coma. Your answer should not include anything except the words divided by a coma<</SYS>>"""

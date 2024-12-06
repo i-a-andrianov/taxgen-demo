@@ -1,7 +1,7 @@
-import wget
 import gzip
 import shutil
 
+import wget
 
 if __name__ == '__main__':
     wget.download("https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.en.300.bin.gz")
