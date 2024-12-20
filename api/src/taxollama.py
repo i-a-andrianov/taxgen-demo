@@ -12,17 +12,15 @@ load_dotenv()
 def load_model_and_tokenizer():
     if torch.cuda.is_available():
         torch.set_default_device(f"cuda:0")
-    config = PeftConfig.from_pretrained("VityaVitalich/TaxoLLaMA_All")
     model = LlamaForCausalLM.from_pretrained(
-        config.base_model_name_or_path,
+        "VityaVitalich/TaxoLlama3.1-8b-instruct",
         torch_dtype=torch.bfloat16,
         token=os.getenv("HF_TOKEN"),
     )
     tokenizer = LlamaTokenizer.from_pretrained(
-        config.base_model_name_or_path, token=os.getenv("HF_TOKEN")
+        "VityaVitalich/TaxoLlama3.1-8b-instruct", token=os.getenv("HF_TOKEN")
     )
-    inference_model = PeftModel.from_pretrained(model, "VityaVitalich/TaxoLLaMA_All")
-    return inference_model, tokenizer
+    return model, tokenizer
 
 
 inference_model, tokenizer = load_model_and_tokenizer()
