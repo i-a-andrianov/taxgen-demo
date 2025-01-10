@@ -3,7 +3,7 @@ import os
 import torch
 from dotenv import load_dotenv
 from peft import PeftConfig, PeftModel
-from transformers import LlamaForCausalLM, LlamaTokenizer
+from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from prompting import SYSTEM_PROMPT
 
@@ -40,7 +40,6 @@ def generate_candidates(word, last_word):
     processed_term += " | synset:"
 
     processed_term = SYSTEM_PROMPT + "\n" + processed_term + "[/INST]"
-
     input_ids = tokenizer(processed_term, return_tensors="pt")
 
     gen_conf = {
@@ -53,8 +52,9 @@ def generate_candidates(word, last_word):
     }
 
     out = inference_model.generate(inputs=input_ids["input_ids"].to("cuda"), **gen_conf)
-
+    print(tokenizer.batch_decode(out)[0])
     text = tokenizer.batch_decode(out)[0][len(SYSTEM_PROMPT) :].split("[/INST]")[-1]
+    print(text)
     return text.split(",")
 
 
