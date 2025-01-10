@@ -1,8 +1,8 @@
 import os
 
 import torch
+import logging
 from dotenv import load_dotenv
-from peft import PeftConfig, PeftModel
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from prompting import SYSTEM_PROMPT
@@ -12,12 +12,12 @@ load_dotenv()
 def load_model_and_tokenizer():
     if torch.cuda.is_available():
         torch.set_default_device(f"cuda:0")
-    model = LlamaForCausalLM.from_pretrained(
+    model = AutoModelForCausalLM.from_pretrained(
         "VityaVitalich/TaxoLlama3.1-8b-instruct",
         torch_dtype=torch.bfloat16,
         token=os.getenv("HF_TOKEN"),
     )
-    tokenizer = LlamaTokenizer.from_pretrained(
+    tokenizer = AutoTokenizer.from_pretrained(
         "VityaVitalich/TaxoLlama3.1-8b-instruct", token=os.getenv("HF_TOKEN")
     )
     return model, tokenizer
@@ -33,29 +33,47 @@ def predict_node_from_taxollama(word, a, cur_index, last_word=None):
     return res
 
 def generate_candidates(word, last_word):
+    """
+    Generate candidate synsets based on the input word and optional last word.
+    """
+    try:
+        logging.info(f"Generating candidates for word: {word}, last_word: {last_word}")
 
-    processed_term = f"hypernym: {word}"
-    if last_word:
-        processed_term += f", hyponym: {last_word}"
-    processed_term += " | synset:"
+        processed_term = f"hypernym: {word}"
+        if last_word:
+            processed_term += f", hyponym: {last_word}"
+        processed_term += " | synset:"
 
-    processed_term = SYSTEM_PROMPT + "\n" + processed_term + "[/INST]"
-    input_ids = tokenizer(processed_term, return_tensors="pt")
+        processed_term = SYSTEM_PROMPT + "\n" + processed_term + "[/INST]"
+        logging.debug(f"Processed term: {processed_term}")
 
-    gen_conf = {
-        "no_repeat_ngram_size": 3,
-        "do_sample": True,
-        "num_beams": 8,
-        "num_return_sequences": 2,
-        "max_new_tokens": 32,
-        "top_k": 20,
-    }
+        input_ids = tokenizer(processed_term, return_tensors="pt")
+        logging.debug(f"Input IDs: {input_ids}")
 
-    out = inference_model.generate(inputs=input_ids["input_ids"].to("cuda"), **gen_conf)
-    print(tokenizer.batch_decode(out)[0])
-    text = tokenizer.batch_decode(out)[0][len(SYSTEM_PROMPT) :].split("[/INST]")[-1]
-    print(text)
-    return text.split(",")
+        gen_conf = {
+            "no_repeat_ngram_size": 3,
+            "do_sample": True,
+            "num_beams": 8,
+            "num_return_sequences": 2,
+            "max_new_tokens": 32,
+            "top_k": 20,
+        }
+        logging.debug(f"Generation config: {gen_conf}")
+
+        out = inference_model.generate(inputs=input_ids["input_ids"].to("cuda"), **gen_conf)
+        logging.debug(f"Model output (raw): {out}")
+
+        text = tokenizer.batch_decode(out)[0][len(SYSTEM_PROMPT) :].split("[/INST]")[-1]
+        logging.info(f"Decoded text: {text}")
+
+        candidates = text.split(",")
+        logging.info(f"Candidates generated: {candidates}")
+
+        return candidates
+
+    except Exception as e:
+        logging.error(f"Error in generate_candidates: {str(e)}", exc_info=True)
+        return []
 
 
 if __name__ == "__main__":
