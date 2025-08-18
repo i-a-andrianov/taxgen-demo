@@ -70,19 +70,19 @@ def get_image(node_id):
         if os.path.exists(os.path.join(dir_path,filename)):
             logging.info(f"Serving existing image: {filename}")
             result = send_file(os.path.join(dir_path,filename), mimetype='image/jpeg')
-            result.headers["X-Image-Source"] = False
+            result.headers["X-Image-Source"] = "False"
             return result
         elif os.path.exists(os.path.join(dir_path,gen_filename)):
             logging.info(f"Serving generated image: {gen_filename}")
             result = send_file(os.path.join(dir_path,gen_filename), mimetype='image/jpeg')
-            result.headers["X-Image-Source"] = True
+            result.headers["X-Image-Source"] = "True"
             return result
         else:
             prompt = f"an image of {synset.name()} ({synset.definition()})"
             image = pipe(prompt).images[0]
             image.save(os.path.join(dir_path,f"images/n{node_id}_generated.jpeg"))
             result = send_file(os.path.join(dir_path,f"images/n{node_id}_generated.jpeg"), mimetype='image/jpeg')
-            result.headers["X-Image-Source"] = True
+            result.headers["X-Image-Source"] = "True"
             return result
     else:
         if not os.path.exists(f"images/{node_id}.jpeg"):
@@ -91,7 +91,7 @@ def get_image(node_id):
                 image = pipe(prompt).images[0]
                 image.save(os.path.join(dir_path,f"images/n{node_id}_generated.jpeg"))
         result = send_file(os.path.join(dir_path,f"images/n{node_id}_generated.jpeg"), mimetype='image/jpeg')
-        result.headers["X-Image-Source"] = True
+        result.headers["X-Image-Source"] = "True"
         return result
  
 
