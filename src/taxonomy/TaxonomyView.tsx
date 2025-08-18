@@ -35,7 +35,7 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
     const {currentWord, words, relations} = taxonomy;
     const definition = words.filter((w) => w.id === currentWord).map((w) => w.definition)[0];
     const lemmas = words.filter((w) => w.id === currentWord).map((w) => w.lemmas)[0];
-
+    const imageType = `/api/images/${currentWord}`;
     const ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -192,6 +192,7 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
             <Card>
               <Card.Img variant="top" src={`/api/images/${currentWord}`}/>
               <Card.Body>
+                <Card.Text><i>{imageType}</i></Card.Text>
                 <Card.Title>{currentWord}</Card.Title>
                 <Card.Text>
                   {lemmas.join()}
