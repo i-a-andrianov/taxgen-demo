@@ -33,6 +33,7 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
       regenerateGraph
     } = props;
     const {currentWord, words, relations} = taxonomy;
+    const current = words.find(w => w.id === currentWord);
     const definition = words.filter((w) => w.id === currentWord).map((w) => w.definition)[0];
     const lemmas = words.filter((w) => w.id === currentWord).map((w) => w.lemmas)[0];
     const [flag, setFlag] = useState<string | null>(null);
@@ -240,7 +241,7 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
                 {/* The image */}
                 <Card.Img
                   variant="top"
-                  src={`/api/images/${currentWord}`}
+                  src={`/api/images/${current?.word}`}
                   style={{
                     display: "block",
                     width: "100%",
