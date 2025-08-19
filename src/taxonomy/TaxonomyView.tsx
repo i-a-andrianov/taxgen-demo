@@ -199,26 +199,85 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
         <Col>
           {currentWord ?
             <Card>
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 12, paddingTop: 8 }}>
-               <Button
-                variant="light"
-                onClick={() => {/* no-op for now */}}
-                aria-label="Previous"
-                className="shadow-sm"
-                style={{ borderRadius: "50%", width: 40, height: 40, padding: 0, border: "1px solid #222" }}
+              <div
+                style={{
+                  position: "relative",
+                  display: "inline-block",
+                  width: "100%",
+                  overflow: "visible",           // make sure arrows aren't clipped
+                }}
               >
-                <span style={{ fontSize: 20, lineHeight: "40px" }}>‹</span>
-              </Button>
-              <Card.Img variant="top" src={`/api/images/${currentWord}`}/>
-              <Button
-                variant="light"
-                onClick={() => {/* no-op for now */}}
-                aria-label="Next"
-                className="shadow-sm"
-                style={{ borderRadius: "50%", width: 40, height: 40, padding: 0, border: "1px solid #222" }}
-              >
-                <span style={{ fontSize: 20, lineHeight: "40px" }}>›</span>
-              </Button>
+                {/* Left arrow */}
+                <button
+                  type="button"
+                  aria-label="Previous"
+                  onClick={() => {}}
+                  style={{
+                    position: "absolute",
+                    top: "50%",
+                    left: 8,                      // inside the image bounds so it can't be cut off
+                    transform: "translateY(-50%)",
+                    width: 44,
+                    height: 44,
+                    borderRadius: "50%",
+                    border: "2px solid #111",
+                    background: "#fff",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: 0,
+                    boxShadow: "0 2px 6px rgba(0,0,0,.15)",
+                    cursor: "pointer",
+                    zIndex: 2,
+                  }}
+                >
+                  {/* crisp SVG chevron */}
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </button>
+              
+                {/* The image */}
+                <Card.Img
+                  variant="top"
+                  src={`/api/images/${currentWord}`}
+                  style={{
+                    display: "block",
+                    width: "100%",
+                    maxWidth: 520,                // adjust to taste
+                    margin: "0 auto",
+                    borderRadius: 8,
+                  }}
+                />
+              
+                {/* Right arrow */}
+                <button
+                  type="button"
+                  aria-label="Next"
+                  onClick={() => {}}
+                  style={{
+                    position: "absolute",
+                    top: "50%",
+                    right: 8,                     // inside the image bounds so it can't be cut off
+                    transform: "translateY(-50%)",
+                    width: 44,
+                    height: 44,
+                    borderRadius: "50%",
+                    border: "2px solid #111",
+                    background: "#fff",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: 0,
+                    boxShadow: "0 2px 6px rgba(0,0,0,.15)",
+                    cursor: "pointer",
+                    zIndex: 2,
+                  }}
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
               </div>
               <Card.Body>
                 <Card.Text><i>{flag === "generated" ? "AI generated" : "Original image"}</i></Card.Text>
