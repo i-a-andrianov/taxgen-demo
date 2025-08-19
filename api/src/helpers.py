@@ -101,6 +101,7 @@ def generate_new_node(graph, start_node, candidates, cur_index, end_node=None):
     graph["relations"].append({"parent": start_node, "child": new_word["id"]})
     if end_node is not None:
         graph["relations"].append({"child": end_node, "parent": new_word["id"]})
+    graph["currentWord"] = new_word["id"]
     return graph
 
 
