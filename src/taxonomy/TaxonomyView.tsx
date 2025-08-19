@@ -199,7 +199,27 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
         <Col>
           {currentWord ?
             <Card>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 12, paddingTop: 8 }}>
+               <Button
+                variant="light"
+                onClick={() => {/* no-op for now */}}
+                aria-label="Previous"
+                className="shadow-sm"
+                style={{ borderRadius: "50%", width: 40, height: 40, padding: 0, border: "1px solid #222" }}
+              >
+                <span style={{ fontSize: 20, lineHeight: "40px" }}>‹</span>
+              </Button>
               <Card.Img variant="top" src={`/api/images/${currentWord}`}/>
+              <Button
+                variant="light"
+                onClick={() => {/* no-op for now */}}
+                aria-label="Next"
+                className="shadow-sm"
+                style={{ borderRadius: "50%", width: 40, height: 40, padding: 0, border: "1px solid #222" }}
+              >
+                <span style={{ fontSize: 20, lineHeight: "40px" }}>›</span>
+              </Button>
+              </div>
               <Card.Body>
                 <Card.Text><i>{flag === "generated" ? "AI generated" : "Original image"}</i></Card.Text>
                 <Card.Title>{currentWord}</Card.Title>
