@@ -44,6 +44,7 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
     const lemmas = words.find(w => w.id === displayId)?.lemmas ?? [];
     const [flag, setFlag] = useState<string | null>(null);
     const ref = useRef<HTMLDivElement>(null);
+    const [focusedId, setFocusedId] = useState<string | null>(null);
 
     useEffect(() => {
       if (!ref.current) return;
@@ -176,9 +177,6 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
     useEffect(() => { setFocusedId(null); }, [currentWord]);
   
     const [search, setSearch] = useState('');
-    const [focusedId, setFocusedId] = useState<string | null>(null);
-    
-  
     return (<>
       <h2>
         <br/>
