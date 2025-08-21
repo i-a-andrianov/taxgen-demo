@@ -34,7 +34,7 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
     } = props;
     const {currentWord, words, relations} = taxonomy;
     const current = words.find(w => w.id === currentWord);
-    const currentWordText = currentNode?.word ?? currentWord;
+    const currentWordText = current?.word ?? currentWord;
     const definition = words.filter((w) => w.id === currentWord).map((w) => w.definition)[0];
     const lemmas = words.filter((w) => w.id === currentWord).map((w) => w.lemmas)[0];
     const [flag, setFlag] = useState<string | null>(null);
