@@ -34,6 +34,7 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
     } = props;
     const {currentWord, words, relations} = taxonomy;
     const current = words.find(w => w.id === currentWord);
+    const currentWordText = currentNode?.word ?? currentWord;
     const definition = words.filter((w) => w.id === currentWord).map((w) => w.definition)[0];
     const lemmas = words.filter((w) => w.id === currentWord).map((w) => w.lemmas)[0];
     const [flag, setFlag] = useState<string | null>(null);
@@ -157,7 +158,7 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
 
     useEffect(() => {
       if (!currentWord) { setFlag(null); return; }
-      fetch(`/api/images/${encodeURIComponent(currentWord)}`, { method: "HEAD" })
+      fetch(`/api/images/${encodeURIComponent(currentWordText)}`, { method: "HEAD" })
         .then(res => setFlag(res.headers.get("X-Image-Source")))
         .catch(() => setFlag(null));
     }, [currentWord]);
@@ -282,7 +283,7 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
               </div>
               <Card.Body>
                 <Card.Text><i>{flag === "generated" ? "AI generated" : "Original image"}</i></Card.Text>
-                <Card.Title>{currentWord}</Card.Title>
+                <Card.Title>{currentWordText}</Card.Title>
                 <Card.Text>
                   {lemmas.join()}
                 </Card.Text>
