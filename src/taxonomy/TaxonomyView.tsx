@@ -176,9 +176,9 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
       fetch(`/api/images/${encodeURIComponent(currentWordText)}`, { method: "HEAD" })
         .then(res => setFlag(res.headers.get("X-Image-Source")))
         .catch(() => setFlag(null));
-    }, [currentWord]);
+    }, [current?.word]);
 
-    useEffect(() => { setFocusedId(null); }, [current?.word]);
+    useEffect(() => { setFocusedId(null); }, [currentWord]);
   
     const [search, setSearch] = useState('');
     return (<>
