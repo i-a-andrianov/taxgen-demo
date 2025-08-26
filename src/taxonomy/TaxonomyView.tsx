@@ -297,7 +297,7 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
                 </button>
               </div>
               <Card.Body>
-                <Card.Text><i>{flag === "generated" ? "AI generated" : "Original image"}</i></Card.Text>
+                <Card.Text><i>{flag === "True" || flag === "generated" ? "AI generated" : "Original image"}</i></Card.Text>
                 <Card.Title>{currentWordText}</Card.Title>
                 <Card.Text>
                   {lemmas.join()}
