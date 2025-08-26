@@ -172,11 +172,11 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
       
   
     useEffect(() => {
-      if (!currentWord) { setFlag(null); return; }
-      fetch(`/api/images/${encodeURIComponent(currentWordText)}`, { method: "HEAD" })
+      if (!displayId) { setFlag(null); return; }
+      fetch(`/api/images/${encodeURIComponent(displayId)}`, { method: "HEAD" })
         .then(res => setFlag(res.headers.get("X-Image-Source")))
         .catch(() => setFlag(null));
-    }, [current?.word]);
+    }, [displayId]);
 
     useEffect(() => { setFocusedId(null); }, [currentWord]);
   
@@ -257,7 +257,7 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
                 {/* The image */}
                 <Card.Img
                   variant="top"
-                  src={`/api/images/${current?.word}`}
+                  src={`/api/images/${displayId}`}
                   style={{
                     display: "block",
                     width: "100%",
