@@ -178,7 +178,7 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
         .catch(() => setFlag(null));
     }, [currentWord]);
 
-    useEffect(() => { setFocusedId(null); }, [currentWord]);
+    useEffect(() => { setFocusedId(null); }, [current?.word]);
   
     const [search, setSearch] = useState('');
     return (<>
