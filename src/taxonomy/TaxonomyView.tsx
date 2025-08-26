@@ -155,18 +155,21 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
         const element = document.getElementById('canvasImg') as HTMLLinkElement;
         element.href = destinationCanvas.toDataURL();
       })
-  
-      return () => {
-        network.off('hold');
-        network.off('doubleClick');
-        network.destroy();
-      }
-    }, [currentWord, words, relations, navigateToWord, generateWords, generateRelations]);
 
       network.on('click', (e) => {
         const id = e.nodes[0];
         if (id) setFocusedId(id);   // open card for that node, no graph change
       });
+      
+      return () => {
+        network.off('hold');
+        network.off('doubleClick');
+        network.off('click');
+        network.destroy();
+      }
+    }, [currentWord, words, relations, navigateToWord, generateWords, generateRelations]);
+
+      
   
     useEffect(() => {
       if (!currentWord) { setFlag(null); return; }
