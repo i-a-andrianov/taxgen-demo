@@ -85,7 +85,7 @@ def get_image(node_id):
             return result
     else:
         if not os.path.exists(f"images/{node_id}.jpeg"):
-            if not os.path.exists(f"images/{node_id}_generated.jpeg"):
+            if not os.path.exists(f"images/n{node_id}_generated.jpeg"):
                 prompt = f"an image of {node_id}"
                 image = pipe(prompt).images[0]
                 image.save(os.path.join(dir_path,f"images/n{node_id}_generated.jpeg"))
