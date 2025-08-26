@@ -192,7 +192,7 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
           <Button style={{ "backgroundColor": "#008CBA", "borderColor": "#008CBA" } as React.CSSProperties} onClick={navigateToRoot}>Back to root</Button>
         </Col>
         <Col xs={1}>
-          <Button style={{ "backgroundColor": "#008CBA", "borderColor": "#008CBA" }as React.CSSProperties} onClick={() => regenerateGraph(currentWord)}>Reset graph</Button>
+          <Button style={{ "backgroundColor": "#008CBA", "borderColor": "#008CBA" }as React.CSSProperties} onClick={() => regenerateGraph(current?.word ?? currentWord)}>Reset graph</Button>
         </Col>
         <Col xs={3}>
           <InputGroup className="mb-3">
