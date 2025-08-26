@@ -37,6 +37,7 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
     // const currentWordText = current?.word ?? currentWord;
     // const definition = words.filter((w) => w.id === currentWord).map((w) => w.definition)[0];
     // const lemmas = words.filter((w) => w.id === currentWord).map((w) => w.lemmas)[0];
+    const [focusedId, setFocusedId] = useState<string | null>(null);  
     const displayId = focusedId ?? currentWord;
     const current = words.find(w => w.id === displayId);
     const currentWordText = current?.word ?? displayId;
@@ -44,7 +45,7 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
     const lemmas = words.find(w => w.id === displayId)?.lemmas ?? [];
     const [flag, setFlag] = useState<string | null>(null);
     const ref = useRef<HTMLDivElement>(null);
-    const [focusedId, setFocusedId] = useState<string | null>(null);
+    
 
     useEffect(() => {
       if (!ref.current) return;
