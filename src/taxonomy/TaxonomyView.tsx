@@ -172,11 +172,11 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
       
   
     useEffect(() => {
-      if (!displayId) { setFlag(null); return; }
-      fetch(`/api/images/${encodeURIComponent(displayId)}`, { method: "HEAD" })
+      if (!current?.word) { setFlag(null); return; }
+      fetch(`/api/images/${encodeURIComponent(current.word)}`, { method: "HEAD" })
         .then(res => setFlag(res.headers.get("X-Image-Source")))
         .catch(() => setFlag(null));
-    }, [displayId]);
+    }, [current?.word]);
 
     useEffect(() => { setFocusedId(null); }, [currentWord]);
   
