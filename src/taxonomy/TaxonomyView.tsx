@@ -257,7 +257,7 @@ export default function TaxonomyView(props: TaxonomyViewProps) {
                 {/* The image */}
                 <Card.Img
                   variant="top"
-                  src={`/api/images/${displayId}`}
+                  src={`/api/images/${current?.word}`}
                   style={{
                     display: "block",
                     width: "100%",
