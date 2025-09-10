@@ -1,2 +1,873 @@
- * Serving Flask app 'main'
- * Debug mode: on
+2025-09-01 08:06:31,884 - DEBUG - https://huggingface.co:443 "GET /api/models/prompthero/openjourney HTTP/1.1" 200 4828
+2025-09-01 08:06:32,064 - DEBUG - https://huggingface.co:443 "HEAD /prompthero/openjourney/resolve/main/model_index.json HTTP/1.1" 307 0
+2025-09-01 08:06:32,253 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/prompthero/openjourney/f4572661b028c732b2b97c8fbdc32fa5db3afe03/model_index.json HTTP/1.1" 200 0
+2025-09-01 08:06:32,254 - DEBUG - Attempting to acquire lock 140409406331104 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/df54d10d14742193a00fd7fd8d8530c85f0577c5.lock
+2025-09-01 08:06:32,255 - DEBUG - Lock 140409406331104 acquired on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/df54d10d14742193a00fd7fd8d8530c85f0577c5.lock
+2025-09-01 08:06:32,410 - DEBUG - https://huggingface.co:443 "GET /api/resolve-cache/models/prompthero/openjourney/f4572661b028c732b2b97c8fbdc32fa5db3afe03/model_index.json HTTP/1.1" 200 541
+2025-09-01 08:06:32,416 - DEBUG - Attempting to release lock 140409406331104 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/df54d10d14742193a00fd7fd8d8530c85f0577c5.lock
+2025-09-01 08:06:32,416 - DEBUG - Lock 140409406331104 released on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/df54d10d14742193a00fd7fd8d8530c85f0577c5.lock
+2025-09-01 08:06:32,573 - DEBUG - https://huggingface.co:443 "GET /api/models/prompthero/openjourney/revision/main HTTP/1.1" 200 4828
+2025-09-01 08:06:32,581 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-09-01 08:06:32,583 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-09-01 08:06:32,585 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-09-01 08:06:32,588 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-09-01 08:06:32,590 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-09-01 08:06:32,592 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-09-01 08:06:32,602 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-09-01 08:06:32,605 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-09-01 08:06:33,020 - DEBUG - https://huggingface.co:443 "HEAD /prompthero/openjourney/resolve/f4572661b028c732b2b97c8fbdc32fa5db3afe03/feature_extractor/preprocessor_config.json HTTP/1.1" 307 0
+2025-09-01 08:06:33,049 - DEBUG - https://huggingface.co:443 "HEAD /prompthero/openjourney/resolve/f4572661b028c732b2b97c8fbdc32fa5db3afe03/model.safetensors HTTP/1.1" 302 0
+2025-09-01 08:06:33,051 - DEBUG - Attempting to acquire lock 140380135169904 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/40a255878ab9382df07730db8d1719512fe60a61c931288d152511ab6443b4af.lock
+2025-09-01 08:06:33,052 - DEBUG - Lock 140380135169904 acquired on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/40a255878ab9382df07730db8d1719512fe60a61c931288d152511ab6443b4af.lock
+2025-09-01 08:06:33,052 - DEBUG - https://huggingface.co:443 "HEAD /prompthero/openjourney/resolve/f4572661b028c732b2b97c8fbdc32fa5db3afe03/safety_checker/model.safetensors HTTP/1.1" 302 0
+2025-09-01 08:06:33,058 - DEBUG - Starting new HTTPS connection (1): cas-bridge.xethub.hf.co:443
+2025-09-01 08:06:33,058 - DEBUG - Attempting to acquire lock 140380135349792 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/9d6a233ff6fd5ccb9f76fd99618d73369c52dd3d8222376384d0e601911089e8.lock
+2025-09-01 08:06:33,059 - DEBUG - https://huggingface.co:443 "HEAD /prompthero/openjourney/resolve/f4572661b028c732b2b97c8fbdc32fa5db3afe03/scheduler/scheduler_config.json HTTP/1.1" 307 0
+2025-09-01 08:06:33,062 - DEBUG - Lock 140380135349792 acquired on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/9d6a233ff6fd5ccb9f76fd99618d73369c52dd3d8222376384d0e601911089e8.lock
+2025-09-01 08:06:33,067 - DEBUG - Starting new HTTPS connection (1): cas-bridge.xethub.hf.co:443
+2025-09-01 08:06:33,101 - DEBUG - https://huggingface.co:443 "HEAD /prompthero/openjourney/resolve/f4572661b028c732b2b97c8fbdc32fa5db3afe03/text_encoder/model.safetensors HTTP/1.1" 302 0
+2025-09-01 08:06:33,103 - DEBUG - Attempting to acquire lock 140380135086256 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/5d3d1299268e3fa1daee2ce59de969b676ad46c5e12c17827c725599d91cc22f.lock
+2025-09-01 08:06:33,103 - DEBUG - Lock 140380135086256 acquired on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/5d3d1299268e3fa1daee2ce59de969b676ad46c5e12c17827c725599d91cc22f.lock
+2025-09-01 08:06:33,108 - DEBUG - Starting new HTTPS connection (1): cas-bridge.xethub.hf.co:443
+2025-09-01 08:06:33,109 - DEBUG - https://huggingface.co:443 "HEAD /prompthero/openjourney/resolve/f4572661b028c732b2b97c8fbdc32fa5db3afe03/text_encoder/config.json HTTP/1.1" 307 0
+2025-09-01 08:06:33,163 - DEBUG - https://huggingface.co:443 "HEAD /prompthero/openjourney/resolve/f4572661b028c732b2b97c8fbdc32fa5db3afe03/safety_checker/config.json HTTP/1.1" 307 0
+2025-09-01 08:06:33,169 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/prompthero/openjourney/f4572661b028c732b2b97c8fbdc32fa5db3afe03/feature_extractor%2Fpreprocessor_config.json HTTP/1.1" 200 0
+2025-09-01 08:06:33,170 - DEBUG - Attempting to acquire lock 140380135009776 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/5294955ff7801083f720b34b55d0f1f51313c5c5.lock
+2025-09-01 08:06:33,170 - DEBUG - Lock 140380135009776 acquired on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/5294955ff7801083f720b34b55d0f1f51313c5c5.lock
+2025-09-01 08:06:33,179 - DEBUG - https://huggingface.co:443 "HEAD /prompthero/openjourney/resolve/f4572661b028c732b2b97c8fbdc32fa5db3afe03/tokenizer/merges.txt HTTP/1.1" 307 0
+2025-09-01 08:06:33,215 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/prompthero/openjourney/f4572661b028c732b2b97c8fbdc32fa5db3afe03/scheduler%2Fscheduler_config.json HTTP/1.1" 200 0
+2025-09-01 08:06:33,216 - DEBUG - Attempting to acquire lock 140380135348736 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/1f7234e8bd04d08b8dc3559be76df13987b32a50.lock
+2025-09-01 08:06:33,217 - DEBUG - Lock 140380135348736 acquired on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/1f7234e8bd04d08b8dc3559be76df13987b32a50.lock
+2025-09-01 08:06:33,301 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/prompthero/openjourney/f4572661b028c732b2b97c8fbdc32fa5db3afe03/text_encoder%2Fconfig.json HTTP/1.1" 200 0
+2025-09-01 08:06:33,302 - DEBUG - Attempting to acquire lock 140380135084912 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/0158a1fd52727adf22359238285afafb150f66f2.lock
+2025-09-01 08:06:33,302 - DEBUG - Lock 140380135084912 acquired on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/0158a1fd52727adf22359238285afafb150f66f2.lock
+2025-09-01 08:06:33,349 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/prompthero/openjourney/f4572661b028c732b2b97c8fbdc32fa5db3afe03/tokenizer%2Fmerges.txt HTTP/1.1" 200 0
+2025-09-01 08:06:33,351 - DEBUG - Attempting to acquire lock 140380135085152 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/76e821f1b6f0a9709293c3b6b51ed90980b3166b.lock
+2025-09-01 08:06:33,351 - DEBUG - Lock 140380135085152 acquired on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/76e821f1b6f0a9709293c3b6b51ed90980b3166b.lock
+2025-09-01 08:06:33,356 - DEBUG - https://huggingface.co:443 "GET /api/resolve-cache/models/prompthero/openjourney/f4572661b028c732b2b97c8fbdc32fa5db3afe03/feature_extractor%2Fpreprocessor_config.json HTTP/1.1" 200 342
+2025-09-01 08:06:33,363 - DEBUG - Attempting to release lock 140380135009776 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/5294955ff7801083f720b34b55d0f1f51313c5c5.lock
+2025-09-01 08:06:33,364 - DEBUG - Lock 140380135009776 released on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/5294955ff7801083f720b34b55d0f1f51313c5c5.lock
+2025-09-01 08:06:33,373 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/prompthero/openjourney/f4572661b028c732b2b97c8fbdc32fa5db3afe03/safety_checker%2Fconfig.json HTTP/1.1" 200 0
+2025-09-01 08:06:33,374 - DEBUG - Attempting to acquire lock 140380135251008 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/99a70345e9c5e901432e8db9ae0d9a1c6f012492.lock
+2025-09-01 08:06:33,374 - DEBUG - Lock 140380135251008 acquired on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/99a70345e9c5e901432e8db9ae0d9a1c6f012492.lock
+2025-09-01 08:06:33,406 - DEBUG - https://huggingface.co:443 "GET /api/resolve-cache/models/prompthero/openjourney/f4572661b028c732b2b97c8fbdc32fa5db3afe03/scheduler%2Fscheduler_config.json HTTP/1.1" 200 308
+2025-09-01 08:06:33,413 - DEBUG - Attempting to release lock 140380135348736 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/1f7234e8bd04d08b8dc3559be76df13987b32a50.lock
+2025-09-01 08:06:33,413 - DEBUG - Lock 140380135348736 released on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/1f7234e8bd04d08b8dc3559be76df13987b32a50.lock
+2025-09-01 08:06:33,458 - DEBUG - https://huggingface.co:443 "GET /api/resolve-cache/models/prompthero/openjourney/f4572661b028c732b2b97c8fbdc32fa5db3afe03/text_encoder%2Fconfig.json HTTP/1.1" 200 612
+2025-09-01 08:06:33,466 - DEBUG - Attempting to release lock 140380135084912 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/0158a1fd52727adf22359238285afafb150f66f2.lock
+2025-09-01 08:06:33,466 - DEBUG - Lock 140380135084912 released on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/0158a1fd52727adf22359238285afafb150f66f2.lock
+2025-09-01 08:06:33,513 - DEBUG - https://huggingface.co:443 "HEAD /prompthero/openjourney/resolve/f4572661b028c732b2b97c8fbdc32fa5db3afe03/tokenizer/special_tokens_map.json HTTP/1.1" 307 0
+2025-09-01 08:06:33,550 - DEBUG - https://huggingface.co:443 "GET /api/resolve-cache/models/prompthero/openjourney/f4572661b028c732b2b97c8fbdc32fa5db3afe03/safety_checker%2Fconfig.json HTTP/1.1" 200 None
+2025-09-01 08:06:33,552 - DEBUG - Attempting to release lock 140380135251008 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/99a70345e9c5e901432e8db9ae0d9a1c6f012492.lock
+2025-09-01 08:06:33,552 - DEBUG - Lock 140380135251008 released on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/99a70345e9c5e901432e8db9ae0d9a1c6f012492.lock
+2025-09-01 08:06:33,566 - DEBUG - https://huggingface.co:443 "GET /api/resolve-cache/models/prompthero/openjourney/f4572661b028c732b2b97c8fbdc32fa5db3afe03/tokenizer%2Fmerges.txt HTTP/1.1" 200 None
+2025-09-01 08:06:33,572 - DEBUG - https://huggingface.co:443 "HEAD /prompthero/openjourney/resolve/f4572661b028c732b2b97c8fbdc32fa5db3afe03/tokenizer/tokenizer_config.json HTTP/1.1" 307 0
+2025-09-01 08:06:33,625 - DEBUG - https://huggingface.co:443 "HEAD /prompthero/openjourney/resolve/f4572661b028c732b2b97c8fbdc32fa5db3afe03/tokenizer/vocab.json HTTP/1.1" 307 0
+2025-09-01 08:06:33,639 - DEBUG - Attempting to release lock 140380135085152 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/76e821f1b6f0a9709293c3b6b51ed90980b3166b.lock
+2025-09-01 08:06:33,640 - DEBUG - Lock 140380135085152 released on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/76e821f1b6f0a9709293c3b6b51ed90980b3166b.lock
+2025-09-01 08:06:33,666 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/prompthero/openjourney/f4572661b028c732b2b97c8fbdc32fa5db3afe03/tokenizer%2Fspecial_tokens_map.json HTTP/1.1" 200 0
+2025-09-01 08:06:33,667 - DEBUG - Attempting to acquire lock 140380135424208 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/2c2130b544c0c5a72d5d00da071ba130a9800fb2.lock
+2025-09-01 08:06:33,668 - DEBUG - Lock 140380135424208 acquired on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/2c2130b544c0c5a72d5d00da071ba130a9800fb2.lock
+2025-09-01 08:06:33,682 - DEBUG - https://cas-bridge.xethub.hf.co:443 "GET /xet-bridge-us/636a251a2ca1d75cb49109ee/a2d5f6c3ea7c6dd72208e2a4cf03e6214db106b717256954170b4974a4206508?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cas%2F20250901%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250901T080558Z&X-Amz-Expires=3600&X-Amz-Signature=fd8d3d019274031a7d2d9a28349dc5903cb49a5eab9ba12fc0925e58b119fc4a&X-Amz-SignedHeaders=host&X-Xet-Cas-Uid=6458a9ed6fa580137af4c710&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&x-id=GetObject&Expires=1756717558&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc1NjcxNzU1OH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2FzLWJyaWRnZS54ZXRodWIuaGYuY28veGV0LWJyaWRnZS11cy82MzZhMjUxYTJjYTFkNzVjYjQ5MTA5ZWUvYTJkNWY2YzNlYTdjNmRkNzIyMDhlMmE0Y2YwM2U2MjE0ZGIxMDZiNzE3MjU2OTU0MTcwYjQ5NzRhNDIwNjUwOCoifV19&Signature=rcqTFBydxh2-MX-03tSkAzO4yDOKgSlZDB1APhePsiN976n0ugws~tzVJHPqq-OsdK2eqWI84yFbMz9A9fRXbNGKcCi2D4zRCqxWraEWUatk6~I5MITFQU1YC9NxLICO21jlE0z5n9l3vM3HB~87yNQAZW0QhRsX5X20wDyFNSsN5M5X3QRlMdCyZ7IvZOsLzvSPev2fY~gA9~psttNBQ7Att6ivUgCRp2mtfQ6eG5QGoqU9hCx3yekcviPf8vd5o~eK~Oq31qS~Fm7PaiNxr8S-L4I2is7oSVYGI5bsB2wkhCzIqrcgnNQc5H36ZIaUMk0aMzD35uLDDwwycTv4ZA__&Key-Pair-Id=K2L8F4GPSG1IFC HTTP/1.1" 200 492265874
+2025-09-01 08:06:33,689 - DEBUG - https://cas-bridge.xethub.hf.co:443 "GET /xet-bridge-us/636a251a2ca1d75cb49109ee/d27752bb6fb99f23d28c55ff89d2b8ea499a687a0ce0a9953fb0e2908a195beb?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cas%2F20250901%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250901T080558Z&X-Amz-Expires=3600&X-Amz-Signature=8df6de09ccf329f6b3a3a5d4a7d0bf4a69ebd470561627cac0a79c0fdf7f168e&X-Amz-SignedHeaders=host&X-Xet-Cas-Uid=6458a9ed6fa580137af4c710&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&x-id=GetObject&Expires=1756717558&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc1NjcxNzU1OH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2FzLWJyaWRnZS54ZXRodWIuaGYuY28veGV0LWJyaWRnZS11cy82MzZhMjUxYTJjYTFkNzVjYjQ5MTA5ZWUvZDI3NzUyYmI2ZmI5OWYyM2QyOGM1NWZmODlkMmI4ZWE0OTlhNjg3YTBjZTBhOTk1M2ZiMGUyOTA4YTE5NWJlYioifV19&Signature=E71SbyDP6nN2hu~GPp2uDWdznCjklLdjLSTbIQKkwvjrniyAhTCzL20m19VTFpYpny3uh4gsoL9im7SOuhPH3qhskpDW2JjY~cgPM5832CaP-kUDFzcwy~YOOLhDNUwq5hc5KUZ4YcBH~navoGfCBHQ0J2Idf9mnXHY2yngEUQvxxx4bzvWPtz0bNsEhqB2BZEnfudF26OhjuleO2Dx7uU7SbfEM9sFoEHM5hTM0zTRUdqw7rurLWqsNBcHv9IUVVSGZhIaClRZzPXU-91Ed5lB-olHNbRlFAczZu8PkkAImIkVw7mwM87-zB5woZ3UOLQtOMUN2A6D~o9gW~qJAlw__&Key-Pair-Id=K2L8F4GPSG1IFC HTTP/1.1" 200 492265879
+2025-09-01 08:06:33,689 - DEBUG - https://cas-bridge.xethub.hf.co:443 "GET /xet-bridge-us/636a251a2ca1d75cb49109ee/3e6084a7831fd989ab9e7a6a88745fce55823b69b6ea6832ff6c5cc08fee958f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cas%2F20250901%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250901T080558Z&X-Amz-Expires=3600&X-Amz-Signature=c29de68eb8e6d0d9ac4e03838c7a8783a5e742a2028d30a7706c5a06b8e3649e&X-Amz-SignedHeaders=host&X-Xet-Cas-Uid=6458a9ed6fa580137af4c710&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&x-id=GetObject&Expires=1756717558&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc1NjcxNzU1OH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2FzLWJyaWRnZS54ZXRodWIuaGYuY28veGV0LWJyaWRnZS11cy82MzZhMjUxYTJjYTFkNzVjYjQ5MTA5ZWUvM2U2MDg0YTc4MzFmZDk4OWFiOWU3YTZhODg3NDVmY2U1NTgyM2I2OWI2ZWE2ODMyZmY2YzVjYzA4ZmVlOTU4ZioifV19&Signature=UFqJiAwsjqjH~mcv26WHHlmwEV0j0cFVvEmSOjnaLU1p2oTHNw8UJWvTcuYT69MNYsqxvtYLMsfFTJqZRD25H~XlptRLF-UTX5g3MLuXW3VRr5b8dODY-0Hsdruf3V6h4YrGeSrnqg-A9fXAbBKnS3QnbtnKrscw95lSy9kkBxsEg481bwPa-UHrIOPHDEl3UgUZ2RPkbDtANt8r2dNiAQrdw4QyFcyLCdK8-3FZ3YsEK7QqfNc6hP9ZfSqPqV47lXROm5dElTOrF~sreCgrKNGg8-8h-9t0IpnUmnCr2zIm4DFF5o7pmspHTau09Cb2L2vyKd0wVPi-ObLJ0GJ0lQ__&Key-Pair-Id=K2L8F4GPSG1IFC HTTP/1.1" 200 1215981830
+2025-09-01 08:06:33,724 - DEBUG - https://huggingface.co:443 "HEAD /prompthero/openjourney/resolve/f4572661b028c732b2b97c8fbdc32fa5db3afe03/unet/config.json HTTP/1.1" 307 0
+2025-09-01 08:06:33,727 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/prompthero/openjourney/f4572661b028c732b2b97c8fbdc32fa5db3afe03/tokenizer%2Ftokenizer_config.json HTTP/1.1" 200 0
+2025-09-01 08:06:33,729 - DEBUG - Attempting to acquire lock 140380135056192 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/5ba7bf706515bc60487ad0e1816b4929b82542d6.lock
+2025-09-01 08:06:33,730 - DEBUG - Lock 140380135056192 acquired on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/5ba7bf706515bc60487ad0e1816b4929b82542d6.lock
+2025-09-01 08:06:33,784 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/prompthero/openjourney/f4572661b028c732b2b97c8fbdc32fa5db3afe03/tokenizer%2Fvocab.json HTTP/1.1" 200 0
+2025-09-01 08:06:33,786 - DEBUG - Attempting to acquire lock 140380135168080 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/469be27c5c010538f845f518c4f5e8574c78f7c8.lock
+2025-09-01 08:06:33,786 - DEBUG - Lock 140380135168080 acquired on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/469be27c5c010538f845f518c4f5e8574c78f7c8.lock
+2025-09-01 08:06:33,803 - DEBUG - https://huggingface.co:443 "HEAD /prompthero/openjourney/resolve/f4572661b028c732b2b97c8fbdc32fa5db3afe03/unet/diffusion_pytorch_model.safetensors HTTP/1.1" 302 0
+2025-09-01 08:06:33,805 - DEBUG - Attempting to acquire lock 140380135058976 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/e7c8bf56a6c16c3a3cb3919f4f0bdc28c2eefb7dbd5f4d9d15a269a1f4a77815.lock
+2025-09-01 08:06:33,805 - DEBUG - Lock 140380135058976 acquired on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/e7c8bf56a6c16c3a3cb3919f4f0bdc28c2eefb7dbd5f4d9d15a269a1f4a77815.lock
+2025-09-01 08:06:33,810 - DEBUG - Starting new HTTPS connection (1): cas-bridge.xethub.hf.co:443
+2025-09-01 08:06:33,882 - DEBUG - https://huggingface.co:443 "GET /api/resolve-cache/models/prompthero/openjourney/f4572661b028c732b2b97c8fbdc32fa5db3afe03/tokenizer%2Ftokenizer_config.json HTTP/1.1" 200 806
+2025-09-01 08:06:33,886 - DEBUG - Attempting to release lock 140380135056192 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/5ba7bf706515bc60487ad0e1816b4929b82542d6.lock
+2025-09-01 08:06:33,886 - DEBUG - Lock 140380135056192 released on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/5ba7bf706515bc60487ad0e1816b4929b82542d6.lock
+2025-09-01 08:06:33,903 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/prompthero/openjourney/f4572661b028c732b2b97c8fbdc32fa5db3afe03/unet%2Fconfig.json HTTP/1.1" 200 0
+2025-09-01 08:06:33,905 - DEBUG - Attempting to acquire lock 140380134720512 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/023f41e47ea7a66c48e3a5e6c5d22b87295bf18f.lock
+2025-09-01 08:06:33,906 - DEBUG - Lock 140380134720512 acquired on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/023f41e47ea7a66c48e3a5e6c5d22b87295bf18f.lock
+2025-09-01 08:06:33,914 - DEBUG - https://huggingface.co:443 "GET /api/resolve-cache/models/prompthero/openjourney/f4572661b028c732b2b97c8fbdc32fa5db3afe03/tokenizer%2Fspecial_tokens_map.json HTTP/1.1" 200 472
+2025-09-01 08:06:33,918 - DEBUG - Attempting to release lock 140380135424208 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/2c2130b544c0c5a72d5d00da071ba130a9800fb2.lock
+2025-09-01 08:06:33,918 - DEBUG - Lock 140380135424208 released on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/2c2130b544c0c5a72d5d00da071ba130a9800fb2.lock
+2025-09-01 08:06:33,948 - DEBUG - https://huggingface.co:443 "GET /api/resolve-cache/models/prompthero/openjourney/f4572661b028c732b2b97c8fbdc32fa5db3afe03/tokenizer%2Fvocab.json HTTP/1.1" 200 None
+2025-09-01 08:06:33,988 - DEBUG - https://cas-bridge.xethub.hf.co:443 "GET /xet-bridge-us/636a251a2ca1d75cb49109ee/16ca38322f3a874c318c58bf4825f5f778a06daca2097eef75a6a6a52a054352?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cas%2F20250901%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250901T080558Z&X-Amz-Expires=3600&X-Amz-Signature=81cfab8f59f2a76731755ba98d7662d46fb0013dbe7fe97a835759c85e7e4bc3&X-Amz-SignedHeaders=host&X-Xet-Cas-Uid=6458a9ed6fa580137af4c710&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27diffusion_pytorch_model.safetensors%3B+filename%3D%22diffusion_pytorch_model.safetensors%22%3B&x-id=GetObject&Expires=1756717558&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc1NjcxNzU1OH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2FzLWJyaWRnZS54ZXRodWIuaGYuY28veGV0LWJyaWRnZS11cy82MzZhMjUxYTJjYTFkNzVjYjQ5MTA5ZWUvMTZjYTM4MzIyZjNhODc0YzMxOGM1OGJmNDgyNWY1Zjc3OGEwNmRhY2EyMDk3ZWVmNzVhNmE2YTUyYTA1NDM1MioifV19&Signature=hIhZtF7rMjcG~i2ZczCHIytoveEdIH~1EGEUagApwrjccd0W63QG~HrNLNjMpv9JpqUPER172S0D07cSy~2COc9ooeNQpS24vlWktE9q6s3saJ56AmxJ10L3sqAO4i2rz~Y1~L7AL3jPDEYtGJ05uSGRtVorwaNlzPi3Fxjfso9pzzLJ7J1ycF8VxJC7F85PQu-yLIl8h9Epj7InjFEpHmPqyM7vA4DHwDHKhZtVLBEi6lVxJ6UXTUMevDJlJTNQo7137DFqqgXimJrPEK-Po19SIf27IbSvAJ6TjvnfRMxLwJ9lR1E95cObvEWY3z8qONj92I7hKkcdPmwBIl8CQA__&Key-Pair-Id=K2L8F4GPSG1IFC HTTP/1.1" 200 3438167540
+2025-09-01 08:06:34,029 - DEBUG - Attempting to release lock 140380135168080 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/469be27c5c010538f845f518c4f5e8574c78f7c8.lock
+2025-09-01 08:06:34,030 - DEBUG - Lock 140380135168080 released on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/469be27c5c010538f845f518c4f5e8574c78f7c8.lock
+2025-09-01 08:06:34,036 - DEBUG - https://huggingface.co:443 "HEAD /prompthero/openjourney/resolve/f4572661b028c732b2b97c8fbdc32fa5db3afe03/vae/config.json HTTP/1.1" 307 0
+2025-09-01 08:06:34,080 - DEBUG - https://huggingface.co:443 "HEAD /prompthero/openjourney/resolve/f4572661b028c732b2b97c8fbdc32fa5db3afe03/vae/diffusion_pytorch_model.safetensors HTTP/1.1" 302 0
+2025-09-01 08:06:34,088 - DEBUG - https://huggingface.co:443 "GET /api/resolve-cache/models/prompthero/openjourney/f4572661b028c732b2b97c8fbdc32fa5db3afe03/unet%2Fconfig.json HTTP/1.1" 200 743
+2025-09-01 08:06:34,117 - DEBUG - Attempting to acquire lock 140380134722288 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/55ad9628530430eed28c01dcf3c971a29ffe5d657856cb054728b6c956da3037.lock
+2025-09-01 08:06:34,118 - DEBUG - Attempting to release lock 140380134720512 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/023f41e47ea7a66c48e3a5e6c5d22b87295bf18f.lock
+2025-09-01 08:06:34,119 - DEBUG - Lock 140380134720512 released on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/023f41e47ea7a66c48e3a5e6c5d22b87295bf18f.lock
+2025-09-01 08:06:34,119 - DEBUG - Lock 140380134722288 acquired on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/55ad9628530430eed28c01dcf3c971a29ffe5d657856cb054728b6c956da3037.lock
+2025-09-01 08:06:34,124 - DEBUG - Starting new HTTPS connection (1): cas-bridge.xethub.hf.co:443
+2025-09-01 08:06:34,192 - DEBUG - https://huggingface.co:443 "HEAD /api/resolve-cache/models/prompthero/openjourney/f4572661b028c732b2b97c8fbdc32fa5db3afe03/vae%2Fconfig.json HTTP/1.1" 200 0
+2025-09-01 08:06:34,194 - DEBUG - Attempting to acquire lock 140380135348112 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/10114575af459fdbfa46141deae9521cf9f5a444.lock
+2025-09-01 08:06:34,195 - DEBUG - Lock 140380135348112 acquired on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/10114575af459fdbfa46141deae9521cf9f5a444.lock
+2025-09-01 08:06:34,312 - DEBUG - https://cas-bridge.xethub.hf.co:443 "GET /xet-bridge-us/636a251a2ca1d75cb49109ee/ab434d9f36b1d2cb91777c8c4b5828dddef9ca5a69c83434c61c002adf6413b7?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cas%2F20250901%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250901T080559Z&X-Amz-Expires=3600&X-Amz-Signature=93d24aa1573ae52c93ab3ba8be0f2ce2a6c7e855e1fbe77f4e01b4c354a0129c&X-Amz-SignedHeaders=host&X-Xet-Cas-Uid=6458a9ed6fa580137af4c710&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27diffusion_pytorch_model.safetensors%3B+filename%3D%22diffusion_pytorch_model.safetensors%22%3B&x-id=GetObject&Expires=1756717559&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc1NjcxNzU1OX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2FzLWJyaWRnZS54ZXRodWIuaGYuY28veGV0LWJyaWRnZS11cy82MzZhMjUxYTJjYTFkNzVjYjQ5MTA5ZWUvYWI0MzRkOWYzNmIxZDJjYjkxNzc3YzhjNGI1ODI4ZGRkZWY5Y2E1YTY5YzgzNDM0YzYxYzAwMmFkZjY0MTNiNyoifV19&Signature=RPJs9b0bLVm6Dj-NhnArNj8ZbXen8RbGWYJA2INM6-h~apVXH137ViWddlZyo6yAMpYypRIaCXyaP2UiCHP8jDjby-ObDvYAS-c2tO5R-be3pFQAkZrygSpwE7uSqzzM7XmY7IKHM3BkroglllBgnCEnrIWTIV0cdpKPawahY~kSYAVYMiLjQGKifQzKQuAePKd8jk6Wtck4RfkRp5Y6wTyDq5~GcptX9dUf8aGXxo-AhXpx7fVaj86gfe3vcNqPTDWKkC0Y0U-oX9y41nxNkj3abrl3167CzA316cZuyWN0SCama~xaVK3J5xqHZg2EFIa60bwgGRqfimq6zi6H5Q__&Key-Pair-Id=K2L8F4GPSG1IFC HTTP/1.1" 200 334643276
+2025-09-01 08:06:34,353 - DEBUG - https://huggingface.co:443 "GET /api/resolve-cache/models/prompthero/openjourney/f4572661b028c732b2b97c8fbdc32fa5db3afe03/vae%2Fconfig.json HTTP/1.1" 200 547
+2025-09-01 08:06:34,358 - DEBUG - Attempting to release lock 140380135348112 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/10114575af459fdbfa46141deae9521cf9f5a444.lock
+2025-09-01 08:06:34,358 - DEBUG - Lock 140380135348112 released on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/10114575af459fdbfa46141deae9521cf9f5a444.lock
+2025-09-01 08:06:39,401 - DEBUG - Attempting to release lock 140380134722288 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/55ad9628530430eed28c01dcf3c971a29ffe5d657856cb054728b6c956da3037.lock
+2025-09-01 08:06:39,402 - DEBUG - Lock 140380134722288 released on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/55ad9628530430eed28c01dcf3c971a29ffe5d657856cb054728b6c956da3037.lock
+2025-09-01 08:06:41,254 - DEBUG - Attempting to release lock 140380135169904 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/40a255878ab9382df07730db8d1719512fe60a61c931288d152511ab6443b4af.lock
+2025-09-01 08:06:41,254 - DEBUG - Lock 140380135169904 released on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/40a255878ab9382df07730db8d1719512fe60a61c931288d152511ab6443b4af.lock
+2025-09-01 08:06:41,259 - DEBUG - Attempting to release lock 140380135086256 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/5d3d1299268e3fa1daee2ce59de969b676ad46c5e12c17827c725599d91cc22f.lock
+2025-09-01 08:06:41,259 - DEBUG - Lock 140380135086256 released on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/5d3d1299268e3fa1daee2ce59de969b676ad46c5e12c17827c725599d91cc22f.lock
+2025-09-01 08:06:52,107 - DEBUG - Attempting to release lock 140380135349792 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/9d6a233ff6fd5ccb9f76fd99618d73369c52dd3d8222376384d0e601911089e8.lock
+2025-09-01 08:06:52,107 - DEBUG - Lock 140380135349792 released on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/9d6a233ff6fd5ccb9f76fd99618d73369c52dd3d8222376384d0e601911089e8.lock
+2025-09-01 08:07:20,998 - DEBUG - Attempting to release lock 140380135058976 on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/e7c8bf56a6c16c3a3cb3919f4f0bdc28c2eefb7dbd5f4d9d15a269a1f4a77815.lock
+2025-09-01 08:07:20,998 - DEBUG - Lock 140380135058976 released on /root/.cache/huggingface/hub/.locks/models--prompthero--openjourney/e7c8bf56a6c16c3a3cb3919f4f0bdc28c2eefb7dbd5f4d9d15a269a1f4a77815.lock
+2025-09-01 08:07:30,644 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8888
+ * Running on http://172.17.0.2:8888
+2025-09-01 08:07:30,644 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-01 08:11:09,234 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:09] "GET /search_node?node_name=dog HTTP/1.0" 200 -
+2025-09-01 08:11:09,484 - DEBUG - Received JSON data: {'uid': None, 'start_node': 'dog.n.01'}
+2025-09-01 08:11:09,485 - ERROR - UID not provided in /centered request
+2025-09-01 08:11:09,486 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:09] "[31m[1mPOST /centered HTTP/1.0[0m" 400 -
+2025-09-01 08:11:12,412 - INFO - New session created with UID: 9beb0333-7784-4491-9249-0a7f9cf80ce6
+2025-09-01 08:11:12,412 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:12] "POST /token HTTP/1.0" 200 -
+2025-09-01 08:11:12,696 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:12] "GET /current?uid=9beb0333-7784-4491-9249-0a7f9cf80ce6 HTTP/1.0" 200 -
+2025-09-01 08:11:12,937 - INFO - Serving generated image: images/n00001740_generated.JPEG
+2025-09-01 08:11:12,938 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:12] "GET /images/entity.n.01 HTTP/1.0" 200 -
+2025-09-01 08:11:12,973 - INFO - Serving generated image: images/n00002137_generated.JPEG
+2025-09-01 08:11:12,973 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:12] "GET /images/abstraction.n.06 HTTP/1.0" 200 -
+2025-09-01 08:11:13,196 - INFO - Serving generated image: images/n00024264_generated.JPEG
+2025-09-01 08:11:13,197 - INFO - Serving generated image: images/n04424418_generated.JPEG
+2025-09-01 08:11:13,199 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:13] "GET /images/attribute.n.02 HTTP/1.0" 200 -
+2025-09-01 08:11:13,199 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:13] "GET /images/thing.n.08 HTTP/1.0" 200 -
+2025-09-01 08:11:13,200 - INFO - Serving generated image: images/n00001930_generated.JPEG
+2025-09-01 08:11:13,201 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:13] "GET /images/physical_entity.n.01 HTTP/1.0" 200 -
+2025-09-01 08:11:13,221 - INFO - Serving generated image: images/n00033020_generated.JPEG
+2025-09-01 08:11:13,222 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:13] "GET /images/communication.n.02 HTTP/1.0" 200 -
+2025-09-01 08:11:13,443 - INFO - Serving generated image: images/n00031264_generated.JPEG
+2025-09-01 08:11:13,444 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:13] "GET /images/group.n.01 HTTP/1.0" 200 -
+2025-09-01 08:11:13,451 - INFO - Serving generated image: images/n00033615_generated.JPEG
+2025-09-01 08:11:13,451 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:13] "GET /images/measure.n.02 HTTP/1.0" 200 -
+2025-09-01 08:11:13,703 - INFO - Serving generated image: images/n05810143_generated.JPEG
+2025-09-01 08:11:13,704 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:13] "GET /images/otherworld.n.01 HTTP/1.0" 200 -
+2025-09-01 08:11:13,707 - INFO - Serving generated image: images/n00023100_generated.JPEG
+2025-09-01 08:11:13,707 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:13] "GET /images/psychological_feature.n.01 HTTP/1.0" 200 -
+2025-09-01 08:11:13,905 - INFO - Serving generated image: images/n00031921_generated.JPEG
+2025-09-01 08:11:13,906 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:13] "GET /images/relation.n.01 HTTP/1.0" 200 -
+2025-09-01 08:11:13,978 - INFO - Serving generated image: images/n07999699_generated.JPEG
+2025-09-01 08:11:13,979 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:13] "GET /images/set.n.02 HTTP/1.0" 200 -
+2025-09-01 08:11:13,987 - INFO - Serving generated image: images/n00007347_generated.JPEG
+2025-09-01 08:11:13,988 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:13] "GET /images/causal_agent.n.01 HTTP/1.0" 200 -
+2025-09-01 08:11:14,094 - INFO - Serving generated image: images/n00020827_generated.JPEG
+2025-09-01 08:11:14,095 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:14] "GET /images/matter.n.03 HTTP/1.0" 200 -
+2025-09-01 08:11:14,106 - INFO - Serving generated image: images/n00002684_generated.JPEG
+2025-09-01 08:11:14,106 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:14] "GET /images/object.n.01 HTTP/1.0" 200 -
+2025-09-01 08:11:14,220 - INFO - Serving generated image: images/n00029677_generated.JPEG
+2025-09-01 08:11:14,221 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:14] "GET /images/process.n.06 HTTP/1.0" 200 -
+2025-09-01 08:11:14,278 - INFO - Serving generated image: images/n14580597_generated.JPEG
+2025-09-01 08:11:14,279 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:14] "GET /images/substance.n.04 HTTP/1.0" 200 -
+2025-09-01 08:11:14,377 - INFO - Serving generated image: images/n00002452_generated.JPEG
+2025-09-01 08:11:14,378 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:14] "GET /images/thing.n.12 HTTP/1.0" 200 -
+2025-09-01 08:11:14,391 - INFO - Serving generated image: images/n03005920_generated.JPEG
+2025-09-01 08:11:14,392 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:14] "GET /images/change.n.06 HTTP/1.0" 200 -
+2025-09-01 08:11:14,414 - INFO - Serving generated image: images/n03395745_generated.JPEG
+2025-09-01 08:11:14,415 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:14] "GET /images/freshener.n.01 HTTP/1.0" 200 -
+2025-09-01 08:11:14,463 - INFO - Serving generated image: images/n03537866_generated.JPEG
+2025-09-01 08:11:14,464 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:14] "GET /images/horror.n.02 HTTP/1.0" 200 -
+2025-09-01 08:11:15,027 - INFO - Serving generated image: images/n03599212_generated.JPEG
+2025-09-01 08:11:15,028 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:15] "GET /images/jimdandy.n.02 HTTP/1.0" 200 -
+2025-09-01 08:11:15,033 - INFO - Serving generated image: images/n04165811_generated.JPEG
+2025-09-01 08:11:15,033 - INFO - Serving generated image: images/n03870461_generated.JPEG
+2025-09-01 08:11:15,034 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:15] "GET /images/security_blanket.n.01 HTTP/1.0" 200 -
+2025-09-01 08:11:15,034 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:15] "GET /images/pacifier.n.02 HTTP/1.0" 200 -
+2025-09-01 08:11:15,058 - INFO - Serving generated image: images/n04320731_generated.JPEG
+2025-09-01 08:11:15,058 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:15] "GET /images/stinker.n.02 HTTP/1.0" 200 -
+2025-09-01 08:11:15,097 - INFO - Serving generated image: images/n04574234_generated.JPEG
+2025-09-01 08:11:15,098 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:15] "GET /images/whacker.n.01 HTTP/1.0" 200 -
+2025-09-01 08:11:15,253 - INFO - Serving generated image: images/n00001740_generated.JPEG
+2025-09-01 08:11:15,254 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:15] "HEAD /images/entity.n.01 HTTP/1.0" 200 -
+2025-09-01 08:11:15,910 - INFO - Serving generated image: images/n00024264_generated.JPEG
+2025-09-01 08:11:15,911 - INFO - 134.100.15.209 - - [01/Sep/2025 08:11:15] "HEAD /images/attribute.n.02 HTTP/1.0" 200 -
+2025-09-01 08:39:28,333 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:28] "GET /current?uid=006db8f4-9e32-48fa-b7ec-74d160afbddd HTTP/1.0" 200 -
+2025-09-01 08:39:28,707 - INFO - Serving generated image: images/n00002137_generated.JPEG
+2025-09-01 08:39:28,708 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:28] "[36mGET /images/abstraction.n.06 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:28,952 - INFO - Serving generated image: images/n00001740_generated.JPEG
+2025-09-01 08:39:28,953 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:28] "[36mHEAD /images/entity.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:29,001 - INFO - Serving generated image: images/n00001930_generated.JPEG
+2025-09-01 08:39:29,002 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:29] "[36mGET /images/physical_entity.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:29,022 - INFO - Serving generated image: images/n00024264_generated.JPEG
+2025-09-01 08:39:29,023 - INFO - Serving generated image: images/n04424418_generated.JPEG
+2025-09-01 08:39:29,024 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:29] "[36mGET /images/attribute.n.02 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:29,025 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:29] "[36mGET /images/thing.n.08 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:29,128 - INFO - Serving generated image: images/n00033020_generated.JPEG
+2025-09-01 08:39:29,129 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:29] "[36mGET /images/communication.n.02 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:29,198 - INFO - Serving generated image: images/n00031264_generated.JPEG
+2025-09-01 08:39:29,200 - INFO - Serving generated image: images/n00001740_generated.JPEG
+2025-09-01 08:39:29,201 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:29] "[36mGET /images/entity.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:29,202 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:29] "[36mGET /images/group.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:29,240 - INFO - Serving generated image: images/n00033615_generated.JPEG
+2025-09-01 08:39:29,241 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:29] "[36mGET /images/measure.n.02 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:29,266 - INFO - Serving generated image: images/n05810143_generated.JPEG
+2025-09-01 08:39:29,267 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:29] "[36mGET /images/otherworld.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:29,271 - INFO - Serving generated image: images/n00023100_generated.JPEG
+2025-09-01 08:39:29,271 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:29] "[36mGET /images/psychological_feature.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:29,372 - INFO - Serving generated image: images/n00031921_generated.JPEG
+2025-09-01 08:39:29,373 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:29] "[36mGET /images/relation.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:29,445 - INFO - Serving generated image: images/n07999699_generated.JPEG
+2025-09-01 08:39:29,446 - INFO - Serving generated image: images/n00007347_generated.JPEG
+2025-09-01 08:39:29,447 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:29] "[36mGET /images/set.n.02 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:29,448 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:29] "[36mGET /images/causal_agent.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:29,475 - INFO - Serving generated image: images/n00020827_generated.JPEG
+2025-09-01 08:39:29,476 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:29] "[36mGET /images/matter.n.03 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:29,511 - INFO - Serving generated image: images/n00002684_generated.JPEG
+2025-09-01 08:39:29,512 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:29] "[36mGET /images/object.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:29,520 - INFO - Serving generated image: images/n00029677_generated.JPEG
+2025-09-01 08:39:29,521 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:29] "[36mGET /images/process.n.06 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:29,617 - INFO - Serving generated image: images/n14580597_generated.JPEG
+2025-09-01 08:39:29,618 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:29] "[36mGET /images/substance.n.04 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:29,696 - INFO - Serving generated image: images/n03005920_generated.JPEG
+2025-09-01 08:39:29,697 - INFO - Serving generated image: images/n00002452_generated.JPEG
+2025-09-01 08:39:29,698 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:29] "[36mGET /images/change.n.06 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:29,698 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:29] "[36mGET /images/thing.n.12 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:29,716 - INFO - Serving generated image: images/n03395745_generated.JPEG
+2025-09-01 08:39:29,717 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:29] "[36mGET /images/freshener.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:29,759 - INFO - Serving generated image: images/n03537866_generated.JPEG
+2025-09-01 08:39:29,760 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:29] "[36mGET /images/horror.n.02 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:29,772 - INFO - Serving generated image: images/n03599212_generated.JPEG
+2025-09-01 08:39:29,772 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:29] "[36mGET /images/jimdandy.n.02 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:29,863 - INFO - Serving generated image: images/n03870461_generated.JPEG
+2025-09-01 08:39:29,864 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:29] "[36mGET /images/pacifier.n.02 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:29,946 - INFO - Serving generated image: images/n04320731_generated.JPEG
+2025-09-01 08:39:29,947 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:29] "[36mGET /images/stinker.n.02 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:29,949 - INFO - Serving generated image: images/n04165811_generated.JPEG
+2025-09-01 08:39:29,949 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:29] "[36mGET /images/security_blanket.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:29,963 - INFO - Serving generated image: images/n04574234_generated.JPEG
+2025-09-01 08:39:29,964 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:29] "[36mGET /images/whacker.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:49,658 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:49] "GET /search_node?node_name=maltese HTTP/1.0" 200 -
+2025-09-01 08:39:49,912 - DEBUG - Received JSON data: {'uid': '006db8f4-9e32-48fa-b7ec-74d160afbddd', 'start_node': 'maltese.n.01'}
+2025-09-01 08:39:49,912 - INFO - Centering graph for UID: 006db8f4-9e32-48fa-b7ec-74d160afbddd to node: maltese.n.01
+2025-09-01 08:39:49,996 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:49] "POST /centered HTTP/1.0" 200 -
+2025-09-01 08:39:50,385 - INFO - Serving generated image: images/n09747618_generated.JPEG
+2025-09-01 08:39:50,386 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:50] "[36mHEAD /images/maltese.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:50,623 - INFO - Serving generated image: images/n09620078_generated.JPEG
+2025-09-01 08:39:50,624 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:50] "[36mGET /images/inhabitant.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:50,684 - INFO - Serving generated image: images/n09686536_generated.JPEG
+2025-09-01 08:39:50,685 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:50] "[36mGET /images/european.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:50,689 - INFO - Serving generated image: images/n09689958_generated.JPEG
+2025-09-01 08:39:50,690 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:50] "[36mGET /images/albanian.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:50,693 - INFO - Serving generated image: images/n09690496_generated.JPEG
+2025-09-01 08:39:50,694 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:50] "[36mGET /images/andorran.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:50,701 - INFO - Serving generated image: images/n09747618_generated.JPEG
+2025-09-01 08:39:50,702 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:50] "[36mGET /images/maltese.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:50,869 - INFO - Serving generated image: images/n09702673_generated.JPEG
+2025-09-01 08:39:50,870 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:50] "[36mGET /images/angle.n.03 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:50,924 - INFO - Serving generated image: images/n09692250_generated.JPEG
+2025-09-01 08:39:50,925 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:50] "[36mGET /images/basque.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:50,927 - INFO - Serving generated image: images/n09691604_generated.JPEG
+2025-09-01 08:39:50,928 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:50] "[36mGET /images/austrian.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:50,929 - INFO - Serving generated image: images/n09694109_generated.JPEG
+2025-09-01 08:39:50,930 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:50] "[36mGET /images/belgian.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:50,931 - INFO - Serving generated image: images/n09709332_generated.JPEG
+2025-09-01 08:39:50,932 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:50] "[36mGET /images/balkan.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:50,943 - INFO - Serving generated image: images/n09863620_generated.JPEG
+2025-09-01 08:39:50,944 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:50] "[36mGET /images/bohemian.n.02 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:51,111 - INFO - Serving generated image: images/n09700964_generated.JPEG
+2025-09-01 08:39:51,112 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:51] "[36mGET /images/britisher.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:51,165 - INFO - Serving generated image: images/n09695620_generated.JPEG
+2025-09-01 08:39:51,166 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:51] "[36mGET /images/bulgarian.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:51,168 - INFO - Serving generated image: images/n09695979_generated.JPEG
+2025-09-01 08:39:51,169 - INFO - Serving generated image: images/n09688008_generated.JPEG
+2025-09-01 08:39:51,170 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:51] "[36mGET /images/byelorussian.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:51,172 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:51] "[36mGET /images/celt.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:51,172 - INFO - Serving generated image: images/n09709795_generated.JPEG
+2025-09-01 08:39:51,173 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:51] "[36mGET /images/cretan.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:51,182 - INFO - Serving generated image: images/n09699020_generated.JPEG
+2025-09-01 08:39:51,183 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:51] "[36mGET /images/cypriot.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:51,348 - INFO - Serving generated image: images/n09699403_generated.JPEG
+2025-09-01 08:39:51,349 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:51] "[36mGET /images/czech.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:51,407 - INFO - Serving generated image: images/n09699642_generated.JPEG
+2025-09-01 08:39:51,408 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:51] "[36mGET /images/dane.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:51,412 - INFO - Serving generated image: images/n09988918_generated.JPEG
+2025-09-01 08:39:51,413 - INFO - Serving generated image: images/n09699200_generated.JPEG
+2025-09-01 08:39:51,413 - INFO - Serving generated image: images/n09686262_generated.JPEG
+2025-09-01 08:39:51,414 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:51] "[36mGET /images/dalmatian.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:51,415 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:51] "[36mGET /images/czechoslovakian.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:51,415 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:51] "[36mGET /images/eurafrican.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:51,585 - INFO - Serving generated image: images/n09706029_generated.JPEG
+2025-09-01 08:39:51,586 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:51] "[36mGET /images/finn.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:51,641 - INFO - Serving generated image: images/n09688804_generated.JPEG
+2025-09-01 08:39:51,642 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:51] "[36mGET /images/frank.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:51,645 - INFO - Serving generated image: images/n09708405_generated.JPEG
+2025-09-01 08:39:51,646 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:51] "[36mGET /images/frenchman.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:51,648 - INFO - Serving generated image: images/n09749011_generated.JPEG
+2025-09-01 08:39:51,649 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:51] "[36mGET /images/gibraltarian.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:51,653 - INFO - Serving generated image: images/n09747722_generated.JPEG
+2025-09-01 08:39:51,654 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:51] "[36mGET /images/german.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:51,661 - INFO - Serving generated image: images/n09686401_generated.JPEG
+2025-09-01 08:39:51,662 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:51] "[36mGET /images/eurasian.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:51,829 - INFO - Serving generated image: images/n10146313_generated.JPEG
+2025-09-01 08:39:51,830 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:51] "[36mGET /images/grecian.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:51,876 - INFO - Serving generated image: images/n09710164_generated.JPEG
+2025-09-01 08:39:51,877 - INFO - Serving generated image: images/n09713985_generated.JPEG
+2025-09-01 08:39:51,878 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:51] "[36mGET /images/greek.n.02 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:51,879 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:51] "[36mGET /images/hungarian.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:51,888 - INFO - Serving generated image: images/n10196133_generated.JPEG
+2025-09-01 08:39:51,888 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:51] "[36mGET /images/iberian.n.02 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:51,892 - INFO - Serving generated image: images/n09714120_generated.JPEG
+2025-09-01 08:39:51,892 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:51] "[36mGET /images/icelander.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:51,905 - INFO - Serving generated image: images/n09714952_generated.JPEG
+2025-09-01 08:39:51,906 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:51] "[36mGET /images/irish_person.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:52,068 - INFO - Serving generated image: images/n09716047_generated.JPEG
+2025-09-01 08:39:52,069 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:52] "[36mGET /images/italian.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:52,112 - INFO - Serving generated image: images/n09720033_generated.JPEG
+2025-09-01 08:39:52,113 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:52] "[36mGET /images/lapp.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:52,115 - INFO - Serving generated image: images/n09703181_generated.JPEG
+2025-09-01 08:39:52,117 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:52] "[36mGET /images/jute.n.02 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:52,133 - INFO - Serving generated image: images/n09707166_generated.JPEG
+2025-09-01 08:39:52,134 - INFO - Serving generated image: images/n09721088_generated.JPEG
+2025-09-01 08:39:52,135 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:52] "[36mGET /images/latvian.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:52,135 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:52] "[36mGET /images/liechtensteiner.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:52,148 - INFO - Serving generated image: images/n09707289_generated.JPEG
+2025-09-01 08:39:52,148 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:52] "[36mGET /images/lithuanian.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:52,304 - INFO - Serving generated image: images/n09703344_generated.JPEG
+2025-09-01 08:39:52,305 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:52] "[36mGET /images/lombard.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:52,350 - INFO - Serving generated image: images/n09721244_generated.JPEG
+2025-09-01 08:39:52,351 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:52] "[36mGET /images/luxemburger.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:52,357 - INFO - Serving generated image: images/n09721444_generated.JPEG
+2025-09-01 08:39:52,358 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:52] "[36mGET /images/macedonian.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:52,379 - INFO - Serving generated image: images/n10327987_generated.JPEG
+2025-09-01 08:39:52,380 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:52] "[36mGET /images/monegasque.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:52,382 - INFO - Serving generated image: images/n09713108_generated.JPEG
+2025-09-01 08:39:52,382 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:52] "[36mGET /images/netherlander.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:52,384 - INFO - Serving generated image: images/n09725402_generated.JPEG
+2025-09-01 08:39:52,384 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:52] "[36mGET /images/norwegian.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:52,542 - INFO - Serving generated image: images/n09727627_generated.JPEG
+2025-09-01 08:39:52,543 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:52] "[36mGET /images/pole.n.02 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:52,593 - INFO - Serving generated image: images/n09728009_generated.JPEG
+2025-09-01 08:39:52,594 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:52] "[36mGET /images/portuguese.n.02 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:52,600 - INFO - Serving generated image: images/n09717047_generated.JPEG
+2025-09-01 08:39:52,601 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:52] "[36mGET /images/roman.n.02 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:52,627 - INFO - Serving generated image: images/n09687775_generated.JPEG
+2025-09-01 08:39:52,627 - INFO - Serving generated image: images/n09728285_generated.JPEG
+2025-09-01 08:39:52,628 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:52] "[36mGET /images/sahib.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:52,630 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:52] "[36mGET /images/romanian.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:52,630 - INFO - Serving generated image: images/n09729945_generated.JPEG
+2025-09-01 08:39:52,631 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:52] "[36mGET /images/san_marinese.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:52,773 - INFO - Serving generated image: images/n09702836_generated.JPEG
+2025-09-01 08:39:52,774 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:52] "[36mGET /images/saxon.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:52,838 - INFO - Serving generated image: images/n09730533_generated.JPEG
+2025-09-01 08:39:52,838 - INFO - Serving generated image: images/n09730204_generated.JPEG
+2025-09-01 08:39:52,839 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:52] "[36mGET /images/scot.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:52,840 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:52] "[36mGET /images/scandinavian.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:52,869 - INFO - Serving generated image: images/n09749753_generated.JPEG
+2025-09-01 08:39:52,870 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:52] "[36mGET /images/slovenian.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:52,877 - INFO - Serving generated image: images/n09699536_generated.JPEG
+2025-09-01 08:39:52,878 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:52] "[36mGET /images/slovak.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:52,880 - INFO - Serving generated image: images/n09731343_generated.JPEG
+2025-09-01 08:39:52,880 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:52] "[36mGET /images/slovene.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:53,012 - INFO - Serving generated image: images/n09731906_generated.JPEG
+2025-09-01 08:39:53,013 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:53] "[36mGET /images/spaniard.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:53,103 - INFO - Serving generated image: images/n09732441_generated.JPEG
+2025-09-01 08:39:53,105 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:53] "[36mGET /images/swede.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:53,106 - INFO - Serving generated image: images/n09689152_generated.JPEG
+2025-09-01 08:39:53,107 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:53] "[36mGET /images/teuton.n.02 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:53,110 - INFO - Serving generated image: images/n09712090_generated.JPEG
+2025-09-01 08:39:53,111 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:53] "[36mGET /images/thracian.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:53,122 - INFO - Serving generated image: images/n09737050_generated.JPEG
+2025-09-01 08:39:53,123 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:53] "[36mGET /images/ukranian.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:53,129 - INFO - Serving generated image: images/n09735023_generated.JPEG
+2025-09-01 08:39:53,130 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:53] "[36mGET /images/tyrolean.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:53,254 - INFO - Serving generated image: images/n09747329_generated.JPEG
+2025-09-01 08:39:53,255 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:53] "[36mGET /images/welshman.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:39:53,348 - INFO - Serving generated image: images/n09750891_generated.JPEG
+2025-09-01 08:39:53,349 - INFO - 134.100.15.209 - - [01/Sep/2025 08:39:53] "[36mGET /images/yugoslav.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:40:09,606 - INFO - New session created with UID: 87db6119-5cb6-4f69-8649-622bf5692a83
+2025-09-01 08:40:09,607 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:09] "POST /token HTTP/1.0" 200 -
+2025-09-01 08:40:09,908 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:09] "GET /current?uid=87db6119-5cb6-4f69-8649-622bf5692a83 HTTP/1.0" 200 -
+2025-09-01 08:40:10,221 - INFO - Serving generated image: images/n00001740_generated.JPEG
+2025-09-01 08:40:10,221 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:10] "HEAD /images/entity.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:10,224 - INFO - Serving generated image: images/n00001740_generated.JPEG
+2025-09-01 08:40:10,225 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:10] "GET /images/entity.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:10,567 - INFO - Serving generated image: images/n00002137_generated.JPEG
+2025-09-01 08:40:10,568 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:10] "GET /images/abstraction.n.06 HTTP/1.0" 200 -
+2025-09-01 08:40:10,570 - INFO - Serving generated image: images/n00024264_generated.JPEG
+2025-09-01 08:40:10,570 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:10] "GET /images/attribute.n.02 HTTP/1.0" 200 -
+2025-09-01 08:40:10,574 - INFO - Serving generated image: images/n00001930_generated.JPEG
+2025-09-01 08:40:10,575 - INFO - Serving generated image: images/n04424418_generated.JPEG
+2025-09-01 08:40:10,576 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:10] "GET /images/physical_entity.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:10,577 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:10] "GET /images/thing.n.08 HTTP/1.0" 200 -
+2025-09-01 08:40:10,578 - INFO - Serving generated image: images/n00033020_generated.JPEG
+2025-09-01 08:40:10,579 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:10] "GET /images/communication.n.02 HTTP/1.0" 200 -
+2025-09-01 08:40:10,707 - INFO - Serving generated image: images/n00031264_generated.JPEG
+2025-09-01 08:40:10,708 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:10] "GET /images/group.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:10,974 - INFO - Serving generated image: images/n00033615_generated.JPEG
+2025-09-01 08:40:10,975 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:10] "GET /images/measure.n.02 HTTP/1.0" 200 -
+2025-09-01 08:40:11,124 - INFO - Serving generated image: images/n05810143_generated.JPEG
+2025-09-01 08:40:11,125 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:11] "GET /images/otherworld.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:11,219 - INFO - Serving generated image: images/n00023100_generated.JPEG
+2025-09-01 08:40:11,220 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:11] "GET /images/psychological_feature.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:11,226 - INFO - Serving generated image: images/n00031921_generated.JPEG
+2025-09-01 08:40:11,227 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:11] "GET /images/relation.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:11,231 - INFO - Serving generated image: images/n07999699_generated.JPEG
+2025-09-01 08:40:11,231 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:11] "GET /images/set.n.02 HTTP/1.0" 200 -
+2025-09-01 08:40:11,416 - INFO - Serving generated image: images/n00007347_generated.JPEG
+2025-09-01 08:40:11,417 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:11] "GET /images/causal_agent.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:11,629 - INFO - Serving generated image: images/n00002684_generated.JPEG
+2025-09-01 08:40:11,629 - INFO - Serving generated image: images/n00020827_generated.JPEG
+2025-09-01 08:40:11,630 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:11] "GET /images/object.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:11,630 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:11] "GET /images/matter.n.03 HTTP/1.0" 200 -
+2025-09-01 08:40:11,644 - INFO - Serving generated image: images/n00029677_generated.JPEG
+2025-09-01 08:40:11,645 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:11] "GET /images/process.n.06 HTTP/1.0" 200 -
+2025-09-01 08:40:11,752 - INFO - Serving generated image: images/n14580597_generated.JPEG
+2025-09-01 08:40:11,752 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:11] "GET /images/substance.n.04 HTTP/1.0" 200 -
+2025-09-01 08:40:11,823 - INFO - Serving generated image: images/n00002452_generated.JPEG
+2025-09-01 08:40:11,824 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:11] "GET /images/thing.n.12 HTTP/1.0" 200 -
+2025-09-01 08:40:11,994 - INFO - Serving generated image: images/n03395745_generated.JPEG
+2025-09-01 08:40:11,995 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:11] "GET /images/freshener.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:12,045 - INFO - Serving generated image: images/n03537866_generated.JPEG
+2025-09-01 08:40:12,046 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:12] "GET /images/horror.n.02 HTTP/1.0" 200 -
+2025-09-01 08:40:12,049 - INFO - Serving generated image: images/n03005920_generated.JPEG
+2025-09-01 08:40:12,049 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:12] "GET /images/change.n.06 HTTP/1.0" 200 -
+2025-09-01 08:40:12,145 - INFO - Serving generated image: images/n03599212_generated.JPEG
+2025-09-01 08:40:12,145 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:12] "GET /images/jimdandy.n.02 HTTP/1.0" 200 -
+2025-09-01 08:40:12,159 - INFO - Serving generated image: images/n03870461_generated.JPEG
+2025-09-01 08:40:12,161 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:12] "GET /images/pacifier.n.02 HTTP/1.0" 200 -
+2025-09-01 08:40:12,436 - INFO - Serving generated image: images/n04165811_generated.JPEG
+2025-09-01 08:40:12,436 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:12] "GET /images/security_blanket.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:12,458 - INFO - Serving generated image: images/n04320731_generated.JPEG
+2025-09-01 08:40:12,459 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:12] "GET /images/stinker.n.02 HTTP/1.0" 200 -
+2025-09-01 08:40:12,482 - INFO - Serving generated image: images/n04574234_generated.JPEG
+2025-09-01 08:40:12,482 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:12] "GET /images/whacker.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:17,480 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:17] "GET /search_node?node_name=maltese HTTP/1.0" 200 -
+2025-09-01 08:40:17,736 - DEBUG - Received JSON data: {'uid': '87db6119-5cb6-4f69-8649-622bf5692a83', 'start_node': 'maltese.n.01'}
+2025-09-01 08:40:17,736 - INFO - Centering graph for UID: 87db6119-5cb6-4f69-8649-622bf5692a83 to node: maltese.n.01
+2025-09-01 08:40:17,807 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:17] "POST /centered HTTP/1.0" 200 -
+2025-09-01 08:40:18,196 - INFO - Serving generated image: images/n09747618_generated.JPEG
+2025-09-01 08:40:18,197 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:18] "HEAD /images/maltese.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:18,435 - INFO - Serving generated image: images/n09747618_generated.JPEG
+2025-09-01 08:40:18,436 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:18] "GET /images/maltese.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:18,493 - INFO - Serving generated image: images/n09689958_generated.JPEG
+2025-09-01 08:40:18,494 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:18] "GET /images/albanian.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:18,496 - INFO - Serving generated image: images/n09686536_generated.JPEG
+2025-09-01 08:40:18,496 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:18] "GET /images/european.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:18,498 - INFO - Serving generated image: images/n09620078_generated.JPEG
+2025-09-01 08:40:18,499 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:18] "GET /images/inhabitant.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:18,500 - INFO - Serving generated image: images/n09690496_generated.JPEG
+2025-09-01 08:40:18,501 - INFO - Serving generated image: images/n09702673_generated.JPEG
+2025-09-01 08:40:18,502 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:18] "GET /images/andorran.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:18,503 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:18] "GET /images/angle.n.03 HTTP/1.0" 200 -
+2025-09-01 08:40:18,980 - INFO - Serving generated image: images/n09691604_generated.JPEG
+2025-09-01 08:40:18,981 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:18] "GET /images/austrian.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:19,129 - INFO - Serving generated image: images/n09694109_generated.JPEG
+2025-09-01 08:40:19,130 - INFO - Serving generated image: images/n09692250_generated.JPEG
+2025-09-01 08:40:19,131 - INFO - Serving generated image: images/n09709332_generated.JPEG
+2025-09-01 08:40:19,132 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:19] "GET /images/belgian.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:19,134 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:19] "GET /images/balkan.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:19,134 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:19] "GET /images/basque.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:19,142 - INFO - Serving generated image: images/n09863620_generated.JPEG
+2025-09-01 08:40:19,143 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:19] "GET /images/bohemian.n.02 HTTP/1.0" 200 -
+2025-09-01 08:40:19,270 - INFO - Serving generated image: images/n09700964_generated.JPEG
+2025-09-01 08:40:19,271 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:19] "GET /images/britisher.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:19,391 - INFO - Serving generated image: images/n09695620_generated.JPEG
+2025-09-01 08:40:19,392 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:19] "GET /images/bulgarian.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:19,547 - INFO - Serving generated image: images/n09695979_generated.JPEG
+2025-09-01 08:40:19,548 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:19] "GET /images/byelorussian.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:19,556 - INFO - Serving generated image: images/n09688008_generated.JPEG
+2025-09-01 08:40:19,556 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:19] "GET /images/celt.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:19,559 - INFO - Serving generated image: images/n09709795_generated.JPEG
+2025-09-01 08:40:19,559 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:19] "GET /images/cretan.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:19,567 - INFO - Serving generated image: images/n09699020_generated.JPEG
+2025-09-01 08:40:19,568 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:19] "GET /images/cypriot.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:19,666 - INFO - Serving generated image: images/n09699403_generated.JPEG
+2025-09-01 08:40:19,667 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:19] "GET /images/czech.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:19,767 - INFO - Serving generated image: images/n09699200_generated.JPEG
+2025-09-01 08:40:19,767 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:19] "GET /images/czechoslovakian.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:19,947 - INFO - Serving generated image: images/n09988918_generated.JPEG
+2025-09-01 08:40:19,947 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:19] "GET /images/dalmatian.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:19,956 - INFO - Serving generated image: images/n09699642_generated.JPEG
+2025-09-01 08:40:19,957 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:19] "GET /images/dane.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:19,978 - INFO - Serving generated image: images/n09686401_generated.JPEG
+2025-09-01 08:40:19,978 - INFO - Serving generated image: images/n09686262_generated.JPEG
+2025-09-01 08:40:19,979 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:19] "GET /images/eurasian.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:19,980 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:19] "GET /images/eurafrican.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:20,076 - INFO - Serving generated image: images/n09706029_generated.JPEG
+2025-09-01 08:40:20,077 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:20] "GET /images/finn.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:20,146 - INFO - Serving generated image: images/n09688804_generated.JPEG
+2025-09-01 08:40:20,147 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:20] "GET /images/frank.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:20,337 - INFO - Serving generated image: images/n09708405_generated.JPEG
+2025-09-01 08:40:20,337 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:20] "GET /images/frenchman.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:20,362 - INFO - Serving generated image: images/n09747722_generated.JPEG
+2025-09-01 08:40:20,363 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:20] "GET /images/german.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:20,387 - INFO - Serving generated image: images/n09749011_generated.JPEG
+2025-09-01 08:40:20,388 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:20] "GET /images/gibraltarian.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:20,406 - INFO - Serving generated image: images/n10146313_generated.JPEG
+2025-09-01 08:40:20,406 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:20] "GET /images/grecian.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:20,520 - INFO - Serving generated image: images/n09710164_generated.JPEG
+2025-09-01 08:40:20,521 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:20] "GET /images/greek.n.02 HTTP/1.0" 200 -
+2025-09-01 08:40:20,534 - INFO - Serving generated image: images/n09713985_generated.JPEG
+2025-09-01 08:40:20,534 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:20] "GET /images/hungarian.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:20,716 - INFO - Serving generated image: images/n10196133_generated.JPEG
+2025-09-01 08:40:20,717 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:20] "GET /images/iberian.n.02 HTTP/1.0" 200 -
+2025-09-01 08:40:20,745 - INFO - Serving generated image: images/n09714120_generated.JPEG
+2025-09-01 08:40:20,746 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:20] "GET /images/icelander.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:20,799 - INFO - Serving generated image: images/n09714952_generated.JPEG
+2025-09-01 08:40:20,800 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:20] "GET /images/irish_person.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:20,844 - INFO - Serving generated image: images/n09716047_generated.JPEG
+2025-09-01 08:40:20,845 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:20] "GET /images/italian.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:20,922 - INFO - Serving generated image: images/n09703181_generated.JPEG
+2025-09-01 08:40:20,923 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:20] "GET /images/jute.n.02 HTTP/1.0" 200 -
+2025-09-01 08:40:20,934 - INFO - Serving generated image: images/n09720033_generated.JPEG
+2025-09-01 08:40:20,934 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:20] "GET /images/lapp.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:21,129 - DEBUG - Received JSON data: {'uid': '87db6119-5cb6-4f69-8649-622bf5692a83', 'start_node': 'maltese_dog.n.01'}
+2025-09-01 08:40:21,129 - INFO - Centering graph for UID: 87db6119-5cb6-4f69-8649-622bf5692a83 to node: maltese_dog.n.01
+2025-09-01 08:40:21,134 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:21] "POST /centered HTTP/1.0" 200 -
+2025-09-01 08:40:21,157 - INFO - Serving generated image: images/n09707166_generated.JPEG
+2025-09-01 08:40:21,158 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:21] "GET /images/latvian.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:21,216 - INFO - Serving generated image: images/n09721088_generated.JPEG
+2025-09-01 08:40:21,216 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:21] "GET /images/liechtensteiner.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:21,256 - INFO - Serving generated image: images/n09707289_generated.JPEG
+2025-09-01 08:40:21,257 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:21] "GET /images/lithuanian.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:21,346 - INFO - Serving generated image: images/n09703344_generated.JPEG
+2025-09-01 08:40:21,347 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:21] "GET /images/lombard.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:21,388 - INFO - Serving generated image: images/n09721244_generated.JPEG
+2025-09-01 08:40:21,388 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:21] "GET /images/luxemburger.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:21,402 - INFO - Serving generated image: images/n09721444_generated.JPEG
+2025-09-01 08:40:21,403 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:21] "GET /images/macedonian.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:21,569 - INFO - Serving existing image: images/n02085936.JPEG
+2025-09-01 08:40:21,570 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:21] "HEAD /images/maltese_dog.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:21,634 - INFO - Serving generated image: images/n10327987_generated.JPEG
+2025-09-01 08:40:21,634 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:21] "GET /images/monegasque.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:21,664 - INFO - Serving generated image: images/n09713108_generated.JPEG
+2025-09-01 08:40:21,664 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:21] "GET /images/netherlander.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:21,756 - INFO - Serving generated image: images/n09725402_generated.JPEG
+2025-09-01 08:40:21,757 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:21] "GET /images/norwegian.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:21,805 - INFO - Serving generated image: images/n09727627_generated.JPEG
+2025-09-01 08:40:21,806 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:21] "GET /images/pole.n.02 HTTP/1.0" 200 -
+2025-09-01 08:40:21,818 - INFO - Serving generated image: images/n09728009_generated.JPEG
+2025-09-01 08:40:21,819 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:21] "GET /images/portuguese.n.02 HTTP/1.0" 200 -
+2025-09-01 08:40:21,820 - INFO - Serving generated image: images/n09717047_generated.JPEG
+2025-09-01 08:40:21,821 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:21] "GET /images/roman.n.02 HTTP/1.0" 200 -
+2025-09-01 08:40:22,062 - INFO - Serving generated image: images/n09728285_generated.JPEG
+2025-09-01 08:40:22,063 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:22] "GET /images/romanian.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:22,070 - INFO - Serving generated image: images/n09687775_generated.JPEG
+2025-09-01 08:40:22,070 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:22] "GET /images/sahib.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:22,171 - INFO - Serving generated image: images/n09729945_generated.JPEG
+2025-09-01 08:40:22,172 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:22] "GET /images/san_marinese.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:22,223 - INFO - Serving generated image: images/n09702836_generated.JPEG
+2025-09-01 08:40:22,224 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:22] "GET /images/saxon.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:22,231 - INFO - Serving generated image: images/n09730204_generated.JPEG
+2025-09-01 08:40:22,232 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:22] "GET /images/scandinavian.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:22,234 - INFO - Serving generated image: images/n09730533_generated.JPEG
+2025-09-01 08:40:22,235 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:22] "GET /images/scot.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:22,473 - INFO - Serving generated image: images/n09699536_generated.JPEG
+2025-09-01 08:40:22,474 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:22] "GET /images/slovak.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:22,475 - INFO - Serving generated image: images/n09731343_generated.JPEG
+2025-09-01 08:40:22,476 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:22] "GET /images/slovene.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:22,585 - INFO - Serving generated image: images/n09749753_generated.JPEG
+2025-09-01 08:40:22,585 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:22] "GET /images/slovenian.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:22,649 - INFO - Serving generated image: images/n09689152_generated.JPEG
+2025-09-01 08:40:22,650 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:22] "GET /images/teuton.n.02 HTTP/1.0" 200 -
+2025-09-01 08:40:22,651 - INFO - Serving generated image: images/n09731906_generated.JPEG
+2025-09-01 08:40:22,652 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:22] "GET /images/spaniard.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:22,655 - INFO - Serving generated image: images/n09732441_generated.JPEG
+2025-09-01 08:40:22,656 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:22] "GET /images/swede.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:22,921 - INFO - Serving generated image: images/n09735023_generated.JPEG
+2025-09-01 08:40:22,922 - INFO - Serving generated image: images/n09712090_generated.JPEG
+2025-09-01 08:40:22,923 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:22] "GET /images/tyrolean.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:22,924 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:22] "GET /images/thracian.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:22,997 - INFO - Serving generated image: images/n09737050_generated.JPEG
+2025-09-01 08:40:22,997 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:22] "GET /images/ukranian.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:23,058 - INFO - Serving generated image: images/n09750891_generated.JPEG
+2025-09-01 08:40:23,059 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:23] "GET /images/yugoslav.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:23,060 - INFO - Serving generated image: images/n09747329_generated.JPEG
+2025-09-01 08:40:23,061 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:23] "GET /images/welshman.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:23,066 - INFO - Serving existing image: images/n02085936.JPEG
+2025-09-01 08:40:23,067 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:23] "GET /images/maltese_dog.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:23,335 - INFO - Serving existing image: images/n02084071.JPEG
+2025-09-01 08:40:23,336 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:23] "GET /images/dog.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:23,343 - INFO - Serving existing image: images/n02085374.JPEG
+2025-09-01 08:40:23,344 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:23] "GET /images/toy_dog.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:23,364 - INFO - Serving existing image: images/n02085620.JPEG
+2025-09-01 08:40:23,365 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:23] "GET /images/chihuahua.n.03 HTTP/1.0" 200 -
+2025-09-01 08:40:23,403 - INFO - Serving existing image: images/n02085782.JPEG
+2025-09-01 08:40:23,403 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:23] "GET /images/japanese_spaniel.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:23,440 - INFO - Serving existing image: images/n02086079.JPEG
+2025-09-01 08:40:23,441 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:23] "GET /images/pekinese.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:23,470 - INFO - Serving existing image: images/n02086240.JPEG
+2025-09-01 08:40:23,471 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:23] "GET /images/shih-tzu.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:23,660 - INFO - Serving existing image: images/n02086346.JPEG
+2025-09-01 08:40:23,661 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:23] "GET /images/toy_spaniel.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:23,700 - INFO - Serving existing image: images/n02087046.JPEG
+2025-09-01 08:40:23,700 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:23] "GET /images/toy_terrier.n.01 HTTP/1.0" 200 -
+2025-09-01 08:40:26,534 - DEBUG - Received JSON data: {'uid': '87db6119-5cb6-4f69-8649-622bf5692a83', 'start_node': 'maltese_dog.n.01'}
+2025-09-01 08:40:26,535 - INFO - Generating new word for UID: 87db6119-5cb6-4f69-8649-622bf5692a83 at node: maltese_dog.n.01
+2025-09-01 08:40:26,535 - INFO - Generating candidates for word: maltese_dog.n.01, last_word: None
+2025-09-01 08:40:26,535 - DEBUG - Processed term: <s>[INST] <<SYS>> You are a helpfull assistant. List all the possible words divided with a coma. Your answer should not include anything except the words divided by a coma<</SYS>>
+hypernym: maltese_dog.n.01 | synset:[/INST]
+2025-09-01 08:40:26,539 - DEBUG - Input IDs: {'input_ids': tensor([[128000,  45147,  31868,  65562,     60,   1134,  39031,   2511,   1472,
+            527,    264,   1520,   9054,  18328,     13,   1796,    682,    279,
+           3284,   4339,  18255,    449,    264,  70398,     13,   4718,   4320,
+           1288,    539,   2997,   4205,   3734,    279,   4339,  18255,    555,
+            264,  70398,     27,    524,  39031,  40171,  69292,  49221,     25,
+           8811,   2392,     68,    821,    540,   1276,     13,   1721,    765,
+           6925,    751,   7407,     14,  65562,     60]]), 'attention_mask': tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]])}
+2025-09-01 08:40:26,539 - DEBUG - Generation config: {'no_repeat_ngram_size': 3, 'do_sample': True, 'num_beams': 8, 'num_return_sequences': 2, 'max_new_tokens': 32, 'top_k': 20}
+2025-09-01 08:40:30,060 - DEBUG - Model output (raw): tensor([[128000,  45147,  31868,  65562,     60,   1134,  39031,   2511,   1472,
+            527,    264,   1520,   9054,  18328,     13,   1796,    682,    279,
+           3284,   4339,  18255,    449,    264,  70398,     13,   4718,   4320,
+           1288,    539,   2997,   4205,   3734,    279,   4339,  18255,    555,
+            264,  70398,     27,    524,  39031,  40171,  69292,  49221,     25,
+           8811,   2392,     68,    821,    540,   1276,     13,   1721,    765,
+           6925,    751,   7407,     14,  65562,     60,   4919,    483,     11,
+           5679,     11,  24301,  18964,     11,  22068,   5679,     11,  22068,
+           9575,  13327,     11,  22068,   2024,   7401,     11,  22068,     11,
+            220,  28875,     11,    220,   6896,     11,    220,  10748,  91842,
+             11,    220],
+        [128000,  45147,  31868,  65562,     60,   1134,  39031,   2511,   1472,
+            527,    264,   1520,   9054,  18328,     13,   1796,    682,    279,
+           3284,   4339,  18255,    449,    264,  70398,     13,   4718,   4320,
+           1288,    539,   2997,   4205,   3734,    279,   4339,  18255,    555,
+            264,  70398,     27,    524,  39031,  40171,  69292,  49221,     25,
+           8811,   2392,     68,    821,    540,   1276,     13,   1721,    765,
+           6925,    751,   7407,     14,  65562,     60,   4919,    483,     11,
+           5679,     11,  24301,  18964,     11,  22068,   5679,     11,  22068,
+           9575,  13327,     11,  22068,   2024,   7401,     11,  22068,     11,
+            220,  28875,     11,    220,   5679,     11,    220,  36041,    278,
+             11,    220]], device='cuda:0')
+2025-09-01 08:40:30,061 - INFO - Decoded text: canine, dog, lapdog, toy dog, toy spaniel, toy terrier, toy,  breed,  pet,  purebred, 
+2025-09-01 08:40:30,061 - INFO - Candidates generated: ['canine', ' dog', ' lapdog', ' toy dog', ' toy spaniel', ' toy terrier', ' toy', '  breed', '  pet', '  purebred', ' ']
+2025-09-01 08:40:30,062 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:30] "POST /generate/words HTTP/1.0" 200 -
+2025-09-01 08:40:34,177 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:34] "GET /images/canine HTTP/1.0" 200 -
+2025-09-01 08:40:37,886 - INFO - Serving existing image: images/n02085936.JPEG
+2025-09-01 08:40:37,887 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:37] "[36mHEAD /images/maltese_dog.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:40:38,134 - DEBUG - Received JSON data: {'uid': '87db6119-5cb6-4f69-8649-622bf5692a83', 'start_node': 'maltese_dog.n.01'}
+2025-09-01 08:40:38,134 - INFO - Generating new word for UID: 87db6119-5cb6-4f69-8649-622bf5692a83 at node: maltese_dog.n.01
+2025-09-01 08:40:38,135 - INFO - Generating candidates for word: maltese_dog.n.01, last_word: None
+2025-09-01 08:40:38,135 - DEBUG - Processed term: <s>[INST] <<SYS>> You are a helpfull assistant. List all the possible words divided with a coma. Your answer should not include anything except the words divided by a coma<</SYS>>
+hypernym: maltese_dog.n.01 | synset:[/INST]
+2025-09-01 08:40:38,137 - DEBUG - Input IDs: {'input_ids': tensor([[128000,  45147,  31868,  65562,     60,   1134,  39031,   2511,   1472,
+            527,    264,   1520,   9054,  18328,     13,   1796,    682,    279,
+           3284,   4339,  18255,    449,    264,  70398,     13,   4718,   4320,
+           1288,    539,   2997,   4205,   3734,    279,   4339,  18255,    555,
+            264,  70398,     27,    524,  39031,  40171,  69292,  49221,     25,
+           8811,   2392,     68,    821,    540,   1276,     13,   1721,    765,
+           6925,    751,   7407,     14,  65562,     60]]), 'attention_mask': tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]])}
+2025-09-01 08:40:38,138 - DEBUG - Generation config: {'no_repeat_ngram_size': 3, 'do_sample': True, 'num_beams': 8, 'num_return_sequences': 2, 'max_new_tokens': 32, 'top_k': 20}
+2025-09-01 08:40:38,812 - ERROR - Error in generate_candidates: probability tensor contains either `inf`, `nan` or element < 0
+Traceback (most recent call last):
+  File "/app/src/taxollama.py", line 63, in generate_candidates
+    out = inference_model.generate(inputs=input_ids["input_ids"].to("cuda"), **gen_conf)
+  File "/usr/local/lib/python3.9/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/transformers/generation/utils.py", line 2254, in generate
+    result = self._beam_search(
+  File "/usr/local/lib/python3.9/site-packages/transformers/generation/utils.py", line 3518, in _beam_search
+    next_tokens = torch.multinomial(probs, num_samples=n_tokens_to_keep)
+RuntimeError: probability tensor contains either `inf`, `nan` or element < 0
+2025-09-01 08:40:38,816 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:38] "POST /generate/words HTTP/1.0" 200 -
+2025-09-01 08:40:39,091 - INFO - Serving existing image: images/n02085936.JPEG
+2025-09-01 08:40:39,092 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:39] "[36mGET /images/maltese_dog.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 08:40:39,389 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:39] "HEAD /images/canine HTTP/1.0" 200 -
+2025-09-01 08:40:44,563 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:44] "GET /images/%20dog HTTP/1.0" 200 -
+2025-09-01 08:40:44,869 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:44] "GET /images/canine HTTP/1.0" 200 -
+2025-09-01 08:40:50,085 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:50] "HEAD /images/%20dog HTTP/1.0" 200 -
+2025-09-01 08:40:53,356 - INFO - 134.100.15.209 - - [01/Sep/2025 08:40:53] "HEAD /images/canine HTTP/1.0" 200 -
+2025-09-01 08:41:16,405 - INFO - 134.100.15.209 - - [01/Sep/2025 08:41:16] "GET /images/%20dog HTTP/1.0" 200 -
+2025-09-01 08:41:20,222 - INFO - 134.100.15.209 - - [01/Sep/2025 08:41:20] "HEAD /images/%20dog HTTP/1.0" 200 -
+2025-09-01 08:41:26,792 - DEBUG - Received JSON data: {'uid': '87db6119-5cb6-4f69-8649-622bf5692a83', 'start_node': '504a8ac1-a66d-49b5-b895-b442835379eb'}
+2025-09-01 08:41:26,793 - INFO - Centering graph for UID: 87db6119-5cb6-4f69-8649-622bf5692a83 to node: 504a8ac1-a66d-49b5-b895-b442835379eb
+2025-09-01 08:41:26,803 - INFO - 134.100.15.209 - - [01/Sep/2025 08:41:26] "[35m[1mPOST /centered HTTP/1.0[0m" 500 -
+2025-09-01 08:41:29,282 - INFO - 134.100.15.209 - - [01/Sep/2025 08:41:29] "GET /images/canine HTTP/1.0" 200 -
+2025-09-01 08:41:33,006 - INFO - 134.100.15.209 - - [01/Sep/2025 08:41:33] "HEAD /images/canine HTTP/1.0" 200 -
+2025-09-01 08:41:40,809 - INFO - 134.100.15.209 - - [01/Sep/2025 08:41:40] "GET /images/%20dog HTTP/1.0" 200 -
+2025-09-01 08:41:44,632 - INFO - 134.100.15.209 - - [01/Sep/2025 08:41:44] "HEAD /images/%20dog HTTP/1.0" 200 -
+2025-09-01 08:41:48,901 - INFO - 134.100.15.209 - - [01/Sep/2025 08:41:48] "GET /images/canine HTTP/1.0" 200 -
+2025-09-01 08:41:53,156 - INFO - 134.100.15.209 - - [01/Sep/2025 08:41:53] "HEAD /images/canine HTTP/1.0" 200 -
+2025-09-01 08:41:55,707 - INFO - 134.100.15.209 - - [01/Sep/2025 08:41:55] "GET /images/%20dog HTTP/1.0" 200 -
+2025-09-01 08:41:59,252 - INFO - 134.100.15.209 - - [01/Sep/2025 08:41:59] "HEAD /images/%20dog HTTP/1.0" 200 -
+2025-09-01 08:42:16,413 - INFO - 134.100.15.209 - - [01/Sep/2025 08:42:16] "GET /images/canine HTTP/1.0" 200 -
+2025-09-01 08:42:20,168 - INFO - 134.100.15.209 - - [01/Sep/2025 08:42:20] "HEAD /images/canine HTTP/1.0" 200 -
+2025-09-01 08:42:23,200 - INFO - 134.100.15.209 - - [01/Sep/2025 08:42:23] "GET /images/%20dog HTTP/1.0" 200 -
+2025-09-01 08:42:26,921 - INFO - 134.100.15.209 - - [01/Sep/2025 08:42:26] "HEAD /images/%20dog HTTP/1.0" 200 -
+2025-09-01 08:59:48,011 - INFO - 134.100.15.209 - - [01/Sep/2025 08:59:48] "GET /images/canine HTTP/1.0" 200 -
+2025-09-01 08:59:51,808 - INFO - 134.100.15.209 - - [01/Sep/2025 08:59:51] "HEAD /images/canine HTTP/1.0" 200 -
+2025-09-01 09:15:02,285 - INFO - Serving existing image: images/n02085936.JPEG
+2025-09-01 09:15:02,286 - INFO - 134.100.15.209 - - [01/Sep/2025 09:15:02] "[36mHEAD /images/maltese_dog.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 09:15:02,350 - DEBUG - Received JSON data: {'uid': '87db6119-5cb6-4f69-8649-622bf5692a83', 'start_node': 'maltese_dog.n.01'}
+2025-09-01 09:15:02,351 - INFO - Generating new word for UID: 87db6119-5cb6-4f69-8649-622bf5692a83 at node: maltese_dog.n.01
+2025-09-01 09:15:02,351 - INFO - Generating candidates for word: maltese_dog.n.01, last_word: None
+2025-09-01 09:15:02,351 - DEBUG - Processed term: <s>[INST] <<SYS>> You are a helpfull assistant. List all the possible words divided with a coma. Your answer should not include anything except the words divided by a coma<</SYS>>
+hypernym: maltese_dog.n.01 | synset:[/INST]
+2025-09-01 09:15:02,353 - DEBUG - Input IDs: {'input_ids': tensor([[128000,  45147,  31868,  65562,     60,   1134,  39031,   2511,   1472,
+            527,    264,   1520,   9054,  18328,     13,   1796,    682,    279,
+           3284,   4339,  18255,    449,    264,  70398,     13,   4718,   4320,
+           1288,    539,   2997,   4205,   3734,    279,   4339,  18255,    555,
+            264,  70398,     27,    524,  39031,  40171,  69292,  49221,     25,
+           8811,   2392,     68,    821,    540,   1276,     13,   1721,    765,
+           6925,    751,   7407,     14,  65562,     60]]), 'attention_mask': tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]])}
+2025-09-01 09:15:02,353 - DEBUG - Generation config: {'no_repeat_ngram_size': 3, 'do_sample': True, 'num_beams': 8, 'num_return_sequences': 2, 'max_new_tokens': 32, 'top_k': 20}
+2025-09-01 09:15:04,551 - DEBUG - Model output (raw): tensor([[128000,  45147,  31868,  65562,     60,   1134,  39031,   2511,   1472,
+            527,    264,   1520,   9054,  18328,     13,   1796,    682,    279,
+           3284,   4339,  18255,    449,    264,  70398,     13,   4718,   4320,
+           1288,    539,   2997,   4205,   3734,    279,   4339,  18255,    555,
+            264,  70398,     27,    524,  39031,  40171,  69292,  49221,     25,
+           8811,   2392,     68,    821,    540,   1276,     13,   1721,    765,
+           6925,    751,   7407,     14,  65562,     60,   4919,    483,     11,
+           5679,     11,  24301,  18964,     11,  22068,   5679,     11,  22068,
+           9575,  13327,     11,  22068,   2024,   7401,     11,  22068,     11,
+            220,  28875,     11,    220,   6896,     11,    220,  10748,  91842,
+             11,    220],
+        [128000,  45147,  31868,  65562,     60,   1134,  39031,   2511,   1472,
+            527,    264,   1520,   9054,  18328,     13,   1796,    682,    279,
+           3284,   4339,  18255,    449,    264,  70398,     13,   4718,   4320,
+           1288,    539,   2997,   4205,   3734,    279,   4339,  18255,    555,
+            264,  70398,     27,    524,  39031,  40171,  69292,  49221,     25,
+           8811,   2392,     68,    821,    540,   1276,     13,   1721,    765,
+           6925,    751,   7407,     14,  65562,     60,   4919,    483,     11,
+           5679,     11,  24301,  18964,     11,  22068,   5679,     11,  22068,
+           9575,  13327,     11,  22068,   2024,   7401,     11,  22068,     11,
+            220,  28875,     11,    220,   5679,     11,    220,  36041,    278,
+             11,    220]], device='cuda:0')
+2025-09-01 09:15:04,552 - INFO - Decoded text: canine, dog, lapdog, toy dog, toy spaniel, toy terrier, toy,  breed,  pet,  purebred, 
+2025-09-01 09:15:04,552 - INFO - Candidates generated: ['canine', ' dog', ' lapdog', ' toy dog', ' toy spaniel', ' toy terrier', ' toy', '  breed', '  pet', '  purebred', ' ']
+2025-09-01 09:15:04,553 - INFO - 134.100.15.209 - - [01/Sep/2025 09:15:04] "POST /generate/words HTTP/1.0" 200 -
+2025-09-01 09:15:04,910 - INFO - Serving existing image: images/n02085936.JPEG
+2025-09-01 09:15:04,911 - INFO - 134.100.15.209 - - [01/Sep/2025 09:15:04] "[36mGET /images/maltese_dog.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 09:15:05,425 - INFO - 134.100.15.209 - - [01/Sep/2025 09:15:05] "[35m[1mGET /images/%20dog HTTP/1.0[0m" 500 -
+2025-09-01 09:15:05,467 - INFO - 134.100.15.209 - - [01/Sep/2025 09:15:05] "[35m[1mGET /images/canine HTTP/1.0[0m" 500 -
+2025-09-01 09:15:05,476 - INFO - 134.100.15.209 - - [01/Sep/2025 09:15:05] "[35m[1mGET /images/%20lapdog HTTP/1.0[0m" 500 -
+2025-09-01 09:17:44,770 - INFO - 134.100.15.209 - - [01/Sep/2025 09:17:44] "GET /images/%20lapdog HTTP/1.0" 200 -
+2025-09-01 09:17:48,616 - INFO - 134.100.15.209 - - [01/Sep/2025 09:17:48] "HEAD /images/%20lapdog HTTP/1.0" 200 -
+2025-09-01 09:17:51,037 - INFO - Serving existing image: images/n02085620.JPEG
+2025-09-01 09:17:51,038 - INFO - 134.100.15.209 - - [01/Sep/2025 09:17:51] "[36mHEAD /images/chihuahua.n.03 HTTP/1.0[0m" 304 -
+2025-09-01 09:17:52,072 - INFO - Serving existing image: images/n02085936.JPEG
+2025-09-01 09:17:52,073 - INFO - 134.100.15.209 - - [01/Sep/2025 09:17:52] "[36mHEAD /images/maltese_dog.n.01 HTTP/1.0[0m" 304 -
+2025-09-01 09:18:29,102 - INFO - 134.100.15.209 - - [01/Sep/2025 09:18:29] "GET /images/%20lapdog HTTP/1.0" 200 -
+2025-09-01 09:18:32,940 - INFO - 134.100.15.209 - - [01/Sep/2025 09:18:32] "HEAD /images/%20lapdog HTTP/1.0" 200 -
+2025-09-01 09:25:07,251 - INFO - 134.100.15.209 - - [01/Sep/2025 09:25:07] "GET /images/%20lapdog HTTP/1.0" 200 -
+2025-09-01 09:25:16,915 - INFO - 134.100.15.209 - - [01/Sep/2025 09:25:16] "GET /images/lapdog HTTP/1.0" 200 -
+2025-09-01 09:25:36,456 - INFO - 134.100.15.209 - - [01/Sep/2025 09:25:36] "GET /images/nlapdog_generated HTTP/1.0" 200 -
+2025-09-01 11:29:48,859 - INFO - 85.142.100.8 - - [01/Sep/2025 11:29:48] "[33mGET / HTTP/1.0[0m" 404 -
+2025-09-01 17:51:56,525 - ERROR - 85.142.100.8 - - [01/Sep/2025 17:51:56] code 400, message Bad HTTP/0.9 request type ('SSH-2.0-OpenSSH_8.9p1')
+2025-09-01 17:51:56,525 - INFO - 85.142.100.8 - - [01/Sep/2025 17:51:56] "[35m[1mSSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.10[0m" HTTPStatus.BAD_REQUEST -
+2025-09-01 17:52:00,050 - ERROR - 85.142.100.8 - - [01/Sep/2025 17:52:00] code 400, message Bad request version ('\x03\x00(\x00\x04ÿ\x08\x00\x01U\x00\x00\x00MSSQLServer\x00H\x0f\x00\x00')
+2025-09-01 17:52:00,050 - INFO - 85.142.100.8 - - [01/Sep/2025 17:52:00] "[35m[1m\x12\x01\x004\x00\x00\x00\x00\x00\x00\x15\x00\x06\x01\x00\x1b\x00\x01\x02\x00\x1c\x00\x0c\x03\x00(\x00\x04ÿ\x08\x00\x01U\x00\x00\x00MSSQLServer\x00H\x0f\x00\x00[0m" HTTPStatus.BAD_REQUEST -
+2025-09-01 17:52:03,563 - ERROR - 85.142.100.8 - - [01/Sep/2025 17:52:03] code 400, message Bad request syntax ('\x05\x00\x00\x03\x10\x00\x00\x00@\x00\x00\x00\x01\x00\x00\x00(\x00\x00\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00ô\x01\x00\x00')
+2025-09-01 17:52:03,563 - INFO - 85.142.100.8 - - [01/Sep/2025 17:52:03] "[35m[1m\x05\x00\x00\x03\x10\x00\x00\x00@\x00\x00\x00\x01\x00\x00\x00(\x00\x00\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00ô\x01\x00\x00[0m" HTTPStatus.BAD_REQUEST -
+2025-09-01 17:52:03,574 - ERROR - 85.142.100.8 - - [01/Sep/2025 17:52:03] code 400, message Bad request syntax ('\x00\x00\x00qj\x81n0\x81k¡\x03\x02\x01\x05¢\x03\x02\x01')
+2025-09-01 17:52:03,574 - INFO - 85.142.100.8 - - [01/Sep/2025 17:52:03] "[35m[1m\x00\x00\x00qj\x81n0\x81k¡\x03\x02\x01\x05¢\x03\x02\x01[0m" HTTPStatus.BAD_REQUEST -
+2025-09-01 17:52:08,159 - ERROR - 85.142.100.8 - - [01/Sep/2025 17:52:08] code 400, message Bad HTTP/0.9 request type ('\x00\x00\x00')
+2025-09-01 17:52:08,160 - INFO - 85.142.100.8 - - [01/Sep/2025 17:52:08] "[35m[1m\x00\x00\x00\x0bsecuremote\x00[0m" HTTPStatus.BAD_REQUEST -
+2025-09-01 17:52:11,671 - ERROR - 85.142.100.8 - - [01/Sep/2025 17:52:11] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00')
+2025-09-01 17:52:11,671 - INFO - 85.142.100.8 - - [01/Sep/2025 17:52:11] "[35m[1m\x03\x00\x00\x0b\x06à\x00\x00\x00\x00\x00[0m" HTTPStatus.BAD_REQUEST -
+2025-09-01 17:52:11,687 - ERROR - 85.142.100.8 - - [01/Sep/2025 17:52:11] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%à\x00\x00\x00\x00\x00Cookie:')
+2025-09-01 17:52:11,688 - INFO - 85.142.100.8 - - [01/Sep/2025 17:52:11] "[35m[1m\x03\x00\x00*%à\x00\x00\x00\x00\x00Cookie: mstshash=nnnn[0m" HTTPStatus.BAD_REQUEST -
+2025-09-01 17:52:15,230 - INFO - 85.142.100.8 - - [01/Sep/2025 17:52:15] "[33mGET / HTTP/1.0[0m" 404 -
+2025-09-02 01:07:39,195 - ERROR - 162.142.125.117 - - [02/Sep/2025 01:07:39] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03ü\x97äÜç¹ª>\x81r¯¯ôñß')
+2025-09-02 01:07:39,195 - INFO - 162.142.125.117 - - [02/Sep/2025 01:07:39] "[35m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03ü\x97äÜç¹ª>\x81r¯¯ôñß\x1f \x8bé\x94ô§ëH[0m" HTTPStatus.BAD_REQUEST -
+2025-09-02 01:07:39,649 - INFO - 162.142.125.117 - - [02/Sep/2025 01:07:39] "[33mGET / HTTP/1.1[0m" 404 -
+2025-09-02 01:21:37,383 - ERROR - 167.94.138.183 - - [02/Sep/2025 01:21:37] code 400, message Bad request version ('À\x14À')
+2025-09-02 01:21:37,383 - INFO - 167.94.138.183 - - [02/Sep/2025 01:21:37] "[35m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03}ÌËl,"wE¼J\x1fÈ\x95\x82\x93+ºÎr\x83=\x18tüÑ\x81Ê\x84\x86\x1e\x8fù T25\x8d\x15\x89GÑC}ì8\x17d'vJû7ííÅy"*ïÇOA\x1a\x9fC\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" HTTPStatus.BAD_REQUEST -
+2025-09-02 01:22:10,179 - ERROR - 167.94.138.183 - - [02/Sep/2025 01:22:10] code 400, message Bad request syntax ('ZG\x00\x00\x00\x05\x00+\x0e\x01\x00')
+2025-09-02 01:22:10,179 - INFO - 167.94.138.183 - - [02/Sep/2025 01:22:10] "[35m[1mZG\x00\x00\x00\x05\x00+\x0e\x01\x00[0m" HTTPStatus.BAD_REQUEST -
+2025-09-02 11:28:33,272 - ERROR - 206.168.34.65 - - [02/Sep/2025 11:28:33] code 400, message Bad request version ('À\x14À')
+2025-09-02 11:28:33,272 - INFO - 206.168.34.65 - - [02/Sep/2025 11:28:33] "[35m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03÷#i2¼\x98à{.}1¾Ô\x0e]>b#±Ôë\x0b+\x15\x02»ÑG\x10©\x99u @\x04Í\x9c3ó\x12ã\x0d\x80Ýv=ÔÖÇ^þ\x97h\x98\x92JÑ°\x90\x16¼ÆÇÃP\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" HTTPStatus.BAD_REQUEST -
+2025-09-02 11:28:36,629 - INFO - 206.168.34.65 - - [02/Sep/2025 11:28:36] "[33mGET / HTTP/1.1[0m" 404 -
+2025-09-02 11:55:22,816 - ERROR - 85.142.100.8 - - [02/Sep/2025 11:55:22] code 400, message Bad HTTP/0.9 request type ('SSH-2.0-OpenSSH_8.9p1')
+2025-09-02 11:55:22,817 - INFO - 85.142.100.8 - - [02/Sep/2025 11:55:22] "[35m[1mSSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.10[0m" HTTPStatus.BAD_REQUEST -
+2025-09-02 11:55:26,341 - ERROR - 85.142.100.8 - - [02/Sep/2025 11:55:26] code 400, message Bad request version ('\x03\x00(\x00\x04ÿ\x08\x00\x01U\x00\x00\x00MSSQLServer\x00H\x0f\x00\x00')
+2025-09-02 11:55:26,342 - INFO - 85.142.100.8 - - [02/Sep/2025 11:55:26] "[35m[1m\x12\x01\x004\x00\x00\x00\x00\x00\x00\x15\x00\x06\x01\x00\x1b\x00\x01\x02\x00\x1c\x00\x0c\x03\x00(\x00\x04ÿ\x08\x00\x01U\x00\x00\x00MSSQLServer\x00H\x0f\x00\x00[0m" HTTPStatus.BAD_REQUEST -
+2025-09-02 11:55:29,854 - ERROR - 85.142.100.8 - - [02/Sep/2025 11:55:29] code 400, message Bad request syntax ('\x05\x00\x00\x03\x10\x00\x00\x00@\x00\x00\x00\x01\x00\x00\x00(\x00\x00\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00ô\x01\x00\x00')
+2025-09-02 11:55:29,855 - INFO - 85.142.100.8 - - [02/Sep/2025 11:55:29] "[35m[1m\x05\x00\x00\x03\x10\x00\x00\x00@\x00\x00\x00\x01\x00\x00\x00(\x00\x00\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00ô\x01\x00\x00[0m" HTTPStatus.BAD_REQUEST -
+2025-09-02 11:55:29,873 - ERROR - 85.142.100.8 - - [02/Sep/2025 11:55:29] code 400, message Bad request syntax ('\x00\x00\x00qj\x81n0\x81k¡\x03\x02\x01\x05¢\x03\x02\x01')
+2025-09-02 11:55:29,874 - INFO - 85.142.100.8 - - [02/Sep/2025 11:55:29] "[35m[1m\x00\x00\x00qj\x81n0\x81k¡\x03\x02\x01\x05¢\x03\x02\x01[0m" HTTPStatus.BAD_REQUEST -
+2025-09-02 11:55:33,398 - ERROR - 85.142.100.8 - - [02/Sep/2025 11:55:33] code 400, message Bad HTTP/0.9 request type ('\x00\x00\x00')
+2025-09-02 11:55:33,398 - INFO - 85.142.100.8 - - [02/Sep/2025 11:55:33] "[35m[1m\x00\x00\x00\x0bsecuremote\x00[0m" HTTPStatus.BAD_REQUEST -
+2025-09-02 11:55:36,911 - ERROR - 85.142.100.8 - - [02/Sep/2025 11:55:36] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00')
+2025-09-02 11:55:36,911 - INFO - 85.142.100.8 - - [02/Sep/2025 11:55:36] "[35m[1m\x03\x00\x00\x0b\x06à\x00\x00\x00\x00\x00[0m" HTTPStatus.BAD_REQUEST -
+2025-09-02 11:55:36,922 - ERROR - 85.142.100.8 - - [02/Sep/2025 11:55:36] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%à\x00\x00\x00\x00\x00Cookie:')
+2025-09-02 11:55:36,922 - INFO - 85.142.100.8 - - [02/Sep/2025 11:55:36] "[35m[1m\x03\x00\x00*%à\x00\x00\x00\x00\x00Cookie: mstshash=nnnn[0m" HTTPStatus.BAD_REQUEST -
+2025-09-02 11:55:40,459 - INFO - 85.142.100.8 - - [02/Sep/2025 11:55:40] "[33mGET / HTTP/1.0[0m" 404 -
+2025-09-03 02:07:23,542 - ERROR - 162.142.125.117 - - [03/Sep/2025 02:07:23] code 400, message Bad request version ('À\x14À')
+2025-09-03 02:07:23,542 - INFO - 162.142.125.117 - - [03/Sep/2025 02:07:23] "[35m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03~e\x8c}ÑÜB\x1c\x95Ó2èKp2«\x8e\x09c\x0d3ÔÙÂ\x9bYâTµý;5 ¤½}ÒD\x07ZØ}\x1b\x9d\x0f&\x83¥\x09 úq9Ã\x92pê\x89\x8b\x8eÍ\x8d\x0f]Í\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" HTTPStatus.BAD_REQUEST -
+2025-09-03 02:07:24,047 - INFO - 162.142.125.117 - - [03/Sep/2025 02:07:24] "[33mGET / HTTP/1.1[0m" 404 -
+2025-09-03 21:28:55,705 - ERROR - 141.98.83.86 - - [03/Sep/2025 21:28:55] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+2025-09-03 21:28:55,705 - INFO - 141.98.83.86 - - [03/Sep/2025 21:28:55] "[35m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+2025-09-03 23:17:01,676 - ERROR - 85.142.100.8 - - [03/Sep/2025 23:17:01] code 400, message Bad HTTP/0.9 request type ('SSH-2.0-OpenSSH_8.9p1')
+2025-09-03 23:17:01,676 - INFO - 85.142.100.8 - - [03/Sep/2025 23:17:01] "[35m[1mSSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.10[0m" HTTPStatus.BAD_REQUEST -
+2025-09-03 23:17:05,201 - ERROR - 85.142.100.8 - - [03/Sep/2025 23:17:05] code 400, message Bad request version ('\x03\x00(\x00\x04ÿ\x08\x00\x01U\x00\x00\x00MSSQLServer\x00H\x0f\x00\x00')
+2025-09-03 23:17:05,202 - INFO - 85.142.100.8 - - [03/Sep/2025 23:17:05] "[35m[1m\x12\x01\x004\x00\x00\x00\x00\x00\x00\x15\x00\x06\x01\x00\x1b\x00\x01\x02\x00\x1c\x00\x0c\x03\x00(\x00\x04ÿ\x08\x00\x01U\x00\x00\x00MSSQLServer\x00H\x0f\x00\x00[0m" HTTPStatus.BAD_REQUEST -
+2025-09-03 23:17:08,713 - ERROR - 85.142.100.8 - - [03/Sep/2025 23:17:08] code 400, message Bad request syntax ('\x05\x00\x00\x03\x10\x00\x00\x00@\x00\x00\x00\x01\x00\x00\x00(\x00\x00\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00ô\x01\x00\x00')
+2025-09-03 23:17:08,713 - INFO - 85.142.100.8 - - [03/Sep/2025 23:17:08] "[35m[1m\x05\x00\x00\x03\x10\x00\x00\x00@\x00\x00\x00\x01\x00\x00\x00(\x00\x00\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00ô\x01\x00\x00[0m" HTTPStatus.BAD_REQUEST -
+2025-09-03 23:17:08,724 - ERROR - 85.142.100.8 - - [03/Sep/2025 23:17:08] code 400, message Bad request syntax ('\x00\x00\x00qj\x81n0\x81k¡\x03\x02\x01\x05¢\x03\x02\x01')
+2025-09-03 23:17:08,725 - INFO - 85.142.100.8 - - [03/Sep/2025 23:17:08] "[35m[1m\x00\x00\x00qj\x81n0\x81k¡\x03\x02\x01\x05¢\x03\x02\x01[0m" HTTPStatus.BAD_REQUEST -
+2025-09-03 23:17:12,248 - ERROR - 85.142.100.8 - - [03/Sep/2025 23:17:12] code 400, message Bad HTTP/0.9 request type ('\x00\x00\x00')
+2025-09-03 23:17:12,249 - INFO - 85.142.100.8 - - [03/Sep/2025 23:17:12] "[35m[1m\x00\x00\x00\x0bsecuremote\x00[0m" HTTPStatus.BAD_REQUEST -
+2025-09-03 23:17:15,761 - ERROR - 85.142.100.8 - - [03/Sep/2025 23:17:15] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00')
+2025-09-03 23:17:15,761 - INFO - 85.142.100.8 - - [03/Sep/2025 23:17:15] "[35m[1m\x03\x00\x00\x0b\x06à\x00\x00\x00\x00\x00[0m" HTTPStatus.BAD_REQUEST -
+2025-09-03 23:17:15,773 - ERROR - 85.142.100.8 - - [03/Sep/2025 23:17:15] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%à\x00\x00\x00\x00\x00Cookie:')
+2025-09-03 23:17:15,773 - INFO - 85.142.100.8 - - [03/Sep/2025 23:17:15] "[35m[1m\x03\x00\x00*%à\x00\x00\x00\x00\x00Cookie: mstshash=nnnn[0m" HTTPStatus.BAD_REQUEST -
+2025-09-03 23:17:19,308 - ERROR - 85.142.100.8 - - [03/Sep/2025 23:17:19] code 400, message Bad request syntax ('\x16\x03\x00\x00S\x01\x00\x00O\x03\x00?G×÷º,îê²`~ó\x00ý\x82{¹Õ\x96Èw\x9bæÄÛ<=Ûoï\x10n\x00\x00(\x00\x16\x00\x13\x00')
+2025-09-03 23:17:19,309 - INFO - 85.142.100.8 - - [03/Sep/2025 23:17:19] "[35m[1m\x16\x03\x00\x00S\x01\x00\x00O\x03\x00?G×÷º,îê²`~ó\x00ý\x82{¹Õ\x96Èw\x9bæÄÛ<=Ûoï\x10n\x00\x00(\x00\x16\x00\x13\x00[0m" HTTPStatus.BAD_REQUEST -
+2025-09-03 23:17:19,332 - ERROR - 85.142.100.8 - - [03/Sep/2025 23:17:19] code 400, message Bad request version ('\x00/\x00')
+2025-09-03 23:17:19,332 - INFO - 85.142.100.8 - - [03/Sep/2025 23:17:19] "[35m[1m\x16\x03\x00\x00i\x01\x00\x00e\x03\x03U\x1c§ärandom1random2random3random4\x00\x00\x0c\x00/\x00[0m" HTTPStatus.BAD_REQUEST -
+2025-09-03 23:17:19,358 - INFO - 85.142.100.8 - - [03/Sep/2025 23:17:19] "[33mGET / HTTP/1.0[0m" 404 -
+2025-09-04 02:46:28,724 - ERROR - 141.98.83.86 - - [04/Sep/2025 02:46:28] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+2025-09-04 02:46:28,724 - INFO - 141.98.83.86 - - [04/Sep/2025 02:46:28] "[35m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+2025-09-04 03:25:41,117 - ERROR - 162.142.125.206 - - [04/Sep/2025 03:25:41] code 400, message Bad request version ('À\x14À')
+2025-09-04 03:25:41,118 - INFO - 162.142.125.206 - - [04/Sep/2025 03:25:41] "[35m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03T\x93\x10\x84\x02\x8fÈµVÆ®½½°*7+9çÉPÕ7úÃ>å0´³|ú ^£A"\x1a"ñê"7G_sa0þ-Mlp>¥ý·ª\x17zTãÝ¯\x8f\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" HTTPStatus.BAD_REQUEST -
+2025-09-04 03:25:41,622 - INFO - 162.142.125.206 - - [04/Sep/2025 03:25:41] "[33mGET / HTTP/1.1[0m" 404 -
+2025-09-04 08:53:36,980 - ERROR - 141.98.83.86 - - [04/Sep/2025 08:53:36] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+2025-09-04 08:53:36,981 - INFO - 141.98.83.86 - - [04/Sep/2025 08:53:36] "[35m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+2025-09-04 12:23:13,117 - ERROR - 167.94.138.183 - - [04/Sep/2025 12:23:13] code 400, message Bad request version ('À\x14À')
+2025-09-04 12:23:13,117 - INFO - 167.94.138.183 - - [04/Sep/2025 12:23:13] "[35m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03aSç*\x1fÿ\x16\x1f\x16\x08\x85\x97qÛ\x90¯â\x194\x8bA\x09sh\x01oÍ).\x9cC\\ ø¶z\x89½Z°¨î:¾¬\x12Ü#?õfo¬ øÇûåÛä\x1f»\x80\x14o\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" HTTPStatus.BAD_REQUEST -
+2025-09-04 12:23:17,533 - INFO - 167.94.138.183 - - [04/Sep/2025 12:23:17] "[33mGET / HTTP/1.1[0m" 404 -
+2025-09-04 14:15:57,749 - ERROR - 146.19.24.85 - - [04/Sep/2025 14:15:57] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+2025-09-04 14:15:57,749 - INFO - 146.19.24.85 - - [04/Sep/2025 14:15:57] "[35m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+2025-09-05 04:22:55,723 - ERROR - 162.142.125.192 - - [05/Sep/2025 04:22:55] code 400, message Bad request version ('À\x14À')
+2025-09-05 04:22:55,724 - INFO - 162.142.125.192 - - [05/Sep/2025 04:22:55] "[35m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03\x81ÿ\x91\x9eË1\x1emFe\x9f\x10½ó\x18)$oÃ\x90%ÞªÿývW\x9cÆÄº£ »*$_\x19\x1aÄ¿ÍA\x87¹z\x8e¦»\x02\x92P\x0c?½T\x08¾,õÂ\x04\x8e\x17x\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" HTTPStatus.BAD_REQUEST -
+2025-09-05 04:22:56,794 - INFO - 162.142.125.192 - - [05/Sep/2025 04:22:56] "[33mGET / HTTP/1.1[0m" 404 -
+2025-09-05 14:50:53,797 - ERROR - 167.94.145.102 - - [05/Sep/2025 14:50:53] code 400, message Bad request version ('À\x14À')
+2025-09-05 14:50:53,798 - INFO - 167.94.145.102 - - [05/Sep/2025 14:50:53] "[35m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03L\x1f\x82\x9dÇ9=w\x90}:fy¢\x18Á9\x82x2=¯qÔ9³.\x08\x97\x11\x12: OMî\x9c\x14ÓPÂ ò°Ö¦\x13\x0c[\x9cH\x11CqY&\x82\x82Gd\x16ß\x16Ã·\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" HTTPStatus.BAD_REQUEST -
+2025-09-05 14:50:57,065 - INFO - 167.94.145.102 - - [05/Sep/2025 14:50:57] "[33mGET / HTTP/1.1[0m" 404 -
+2025-09-05 14:51:01,073 - INFO - 167.94.145.102 - - [05/Sep/2025 14:51:01] "[33mGET / HTTP/1.1[0m" 404 -
+2025-09-05 14:51:01,338 - ERROR - 167.94.145.102 - - [05/Sep/2025 14:51:01] code 505, message Invalid HTTP version (2.0)
+2025-09-05 14:51:01,338 - INFO - 167.94.145.102 - - [05/Sep/2025 14:51:01] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+2025-09-05 14:51:05,944 - ERROR - 167.94.145.102 - - [05/Sep/2025 14:51:05] code 505, message Invalid HTTP version (2.0)
+2025-09-05 14:51:05,944 - INFO - 167.94.145.102 - - [05/Sep/2025 14:51:05] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+2025-09-05 14:51:06,061 - INFO - 167.94.145.102 - - [05/Sep/2025 14:51:06] "[33mGET /.well-known/security.txt HTTP/1.1[0m" 404 -
+2025-09-06 16:28:54,231 - ERROR - 162.142.125.217 - - [06/Sep/2025 16:28:54] code 400, message Bad request version ('À\x14À')
+2025-09-06 16:28:54,231 - INFO - 162.142.125.217 - - [06/Sep/2025 16:28:54] "[35m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03ë\x1b\x1c:"¢lÅmtå8c?ëåá.\x18\x16\x15º§q\x94Ï\x90\x8a§»Ç\x85 \x86P\x0eíã\x99\x10@\x19¬ ¨o\x7fÍ\x8cú\x02%\x09¨â\x19%¯-¸v\x8a¼ÏI\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" HTTPStatus.BAD_REQUEST -
+2025-09-06 16:28:54,480 - INFO - 162.142.125.217 - - [06/Sep/2025 16:28:54] "[33mGET / HTTP/1.1[0m" 404 -
+2025-09-07 11:13:41,593 - ERROR - 91.199.163.71 - - [07/Sep/2025 11:13:41] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+2025-09-07 11:13:41,593 - INFO - 91.199.163.71 - - [07/Sep/2025 11:13:41] "[35m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+2025-09-07 17:31:59,265 - ERROR - 167.94.138.35 - - [07/Sep/2025 17:31:59] code 400, message Bad request version ('À\x14À')
+2025-09-07 17:31:59,266 - INFO - 167.94.138.35 - - [07/Sep/2025 17:31:59] "[35m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03@\x1e/\x8e¬\x07\x97Á1U\x94GÌ\x10\x97èø\x07½\x8f(\x00"A\x92[\x01µz¸@Û ZÏaýp¦\x86\x96Oú\x1cìò\x83±¦\x10^R×w©X\x8b[2\x85\x9aÎÚ\x1dÚ\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" HTTPStatus.BAD_REQUEST -
+2025-09-07 17:32:00,904 - INFO - 167.94.138.35 - - [07/Sep/2025 17:32:00] "[33mGET / HTTP/1.1[0m" 404 -
+2025-09-08 18:35:06,373 - ERROR - 162.142.125.118 - - [08/Sep/2025 18:35:06] code 400, message Bad request version ('À\x14À')
+2025-09-08 18:35:06,373 - INFO - 162.142.125.118 - - [08/Sep/2025 18:35:06] "[35m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x031Âeðã¶\x83\x81ô\x9c\x83AÆû\x80ï\x9a\x91biÂüz:AC1Á§íòB \x97\x87Õ@\x11Ô!wÉò]M)ÚÌª">Y\x07K$÷\x19\x82\x00Îß¸ßÊ\x1f\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" HTTPStatus.BAD_REQUEST -
+2025-09-08 18:35:07,021 - INFO - 162.142.125.118 - - [08/Sep/2025 18:35:07] "[33mGET / HTTP/1.1[0m" 404 -
+2025-09-09 13:29:13,222 - INFO - 167.94.138.192 - - [09/Sep/2025 13:29:13] "[33mGET / HTTP/1.1[0m" 404 -
+2025-09-09 13:29:20,487 - INFO - 167.94.138.192 - - [09/Sep/2025 13:29:20] "[33mGET / HTTP/1.1[0m" 404 -
+2025-09-09 13:29:21,250 - ERROR - 167.94.138.192 - - [09/Sep/2025 13:29:21] code 505, message Invalid HTTP version (2.0)
+2025-09-09 13:29:21,250 - INFO - 167.94.138.192 - - [09/Sep/2025 13:29:21] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+2025-09-09 13:29:25,458 - ERROR - 167.94.138.192 - - [09/Sep/2025 13:29:25] code 505, message Invalid HTTP version (2.0)
+2025-09-09 13:29:25,459 - INFO - 167.94.138.192 - - [09/Sep/2025 13:29:25] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+2025-09-09 13:29:26,805 - INFO - 167.94.138.192 - - [09/Sep/2025 13:29:26] "[33mGET /sitemap.xml HTTP/1.1[0m" 404 -
+2025-09-10 13:24:15,449 - INFO - 134.100.15.209 - - [10/Sep/2025 13:24:15] "GET /current?uid=9beb0333-7784-4491-9249-0a7f9cf80ce6 HTTP/1.0" 200 -
+2025-09-10 13:24:15,643 - INFO - Serving generated image: images/n00001740_generated.JPEG
+2025-09-10 13:24:15,647 - INFO - 134.100.15.209 - - [10/Sep/2025 13:24:15] "GET /images/entity.n.01 HTTP/1.0" 200 -
+2025-09-10 13:24:15,675 - INFO - Serving generated image: images/n00002137_generated.JPEG
+2025-09-10 13:24:15,677 - INFO - Serving generated image: images/n00001930_generated.JPEG
+2025-09-10 13:24:15,678 - INFO - 134.100.15.209 - - [10/Sep/2025 13:24:15] "GET /images/abstraction.n.06 HTTP/1.0" 200 -
+2025-09-10 13:24:15,679 - INFO - 134.100.15.209 - - [10/Sep/2025 13:24:15] "GET /images/physical_entity.n.01 HTTP/1.0" 200 -
+2025-09-10 13:24:15,830 - INFO - Serving generated image: images/n04424418_generated.JPEG
+2025-09-10 13:24:15,832 - INFO - Serving generated image: images/n00024264_generated.JPEG
+2025-09-10 13:24:15,833 - INFO - 134.100.15.209 - - [10/Sep/2025 13:24:15] "GET /images/thing.n.08 HTTP/1.0" 200 -
+2025-09-10 13:24:15,835 - INFO - 134.100.15.209 - - [10/Sep/2025 13:24:15] "GET /images/attribute.n.02 HTTP/1.0" 200 -
